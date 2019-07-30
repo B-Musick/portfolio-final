@@ -3,9 +3,9 @@ let app = express(); // Instantiate application
 
 app.set('view engine', 'ejs');
 
-app.get('/', (req,res)=>{
-    res.send('Hi');
-});
+let indexRoutes = require('./routes/index');
+
+app.use('/', indexRoutes); // Import the root router
 
 app.listen(3000,()=>{
     // Start application
