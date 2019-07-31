@@ -1,0 +1,21 @@
+.navbar {
+    background-color: black;
+    display: flex;
+    padding: 20px;
+    
+}
+
+.navbar-about{
+    margin-right: auto;
+}
+.navbar-projects,
+.navbar-resume,
+.navbar-blogs,
+.navbar-contact {
+    margin-right: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
