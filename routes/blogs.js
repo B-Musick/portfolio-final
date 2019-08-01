@@ -38,5 +38,13 @@ router.get('/:id', (req,res)=>{
         err ? console.log(err) : res.render('blogs/show', { blog: showBlog });
     })
 
-})
+});
+
+// EDIT ROUTE --> /blogs/:id/edit
+router.get('/:id/edit', (req, res) => {
+    Blog.findById(req.params.id, (err, foundBlog) => {
+        err ? res.redirect('/blogs') : res.render('blogs/edit', { blog: foundBlog });
+    });
+});
+
 module.exports = router;

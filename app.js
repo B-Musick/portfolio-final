@@ -7,9 +7,9 @@ let express     = require('express'); // Import express package
     passport = require('passport'),
     LocalStrategy = require('passport-local');
 
-
-    
-
+// This is needed for the PUT request of update
+methodOverride = require("method-override");
+app.use(methodOverride("_method"));
 
 app.set('view engine', 'ejs'); // Dont have to add .ejs to files
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -1,4 +1,6 @@
 <% include ../partials/header %>
 <!-- 'blog' is passed in through the show route based of :id -->
  <div><%=blog.title%></div>
+
+ <a href="/blogs/<%=blog._id%>/edit">EDIT BLOG</a>
 <% include ../partials/footer %>
