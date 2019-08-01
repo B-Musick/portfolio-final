@@ -1,3 +1,10 @@
 <% include ../partials/header %>
     <a href="/blogs/new">Add Blog</a>
+
+    <!-- 'blogs' comes in through the index route '.find({})' -->
+    <% blogs.forEach(blog =>{ %>
+        <div><%=blog.title%></div>
+        <img src="<%=blog.image%>">
+        <a href="/blogs/<%=blog._id%>">Show More</a>
+    <%})%>
 <% include ../partials/footer %>

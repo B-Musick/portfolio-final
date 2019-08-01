@@ -10,11 +10,10 @@ let Blog = require('../models/blog')
 router.get('/', (req, res) => {
     // Find returns all blogs from database ({})
     // foundBlogs will return the blogs, blogs will hold all the blogs
-    Plant.find({}, (err, foundPlants) => {
+    Blog.find({}, (err, foundBlogs) => {
         err ? console.log(err) : res.render('blogs/index', { blogs: foundBlogs });
     });
 });
-
 
 /** NEW ROUTE --> /blogs/new */
 router.get('/new', (req,res)=>{
@@ -30,4 +29,13 @@ router.post('/',(req,res)=>{
         err? console.log(err):res.redirect('/blogs');
     });
 });
+
+/* SHOW ROUTE --> blogs/show */
+router.get('/:id', (req,res)=>{
+    // 
+    Blog.findById(req.params.id, (err, showBlog) => {
+        err ? console.log(err) : res.render('blogs/show', { plant: showBlog });
+    })
+
+})
 module.exports = router;
