@@ -32,6 +32,12 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// APPLY currentUser FROM PLANT INDEX ROUTE TO ALL ROUTES SINCE IN HEADER
+app.use(function (req, res, next) {
+    res.locals.currentUser = req.user;
+    next(); // This moves to the next middleware route
+});
+
 app.use(methodOverride("_method"));
 
 // CONNECT THE DATABASE RUNNING ON DEFAULT PORT 27017
@@ -45,6 +51,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 
 // ROUTE IMPORTS - Shorten the URLS here
+// Need to be at the bottom ? wasnt letting me create new blog, edit
 app.use('/', indexRoutes); // Import the root router
 app.use('/blogs', blogRoutes); // Import blog routes
 

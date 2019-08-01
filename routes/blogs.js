@@ -4,6 +4,9 @@ let router = express.Router();
 
 let Blog = require('../models/blog')
 
+var middleware = require('../middleware');
+
+
 /***************************INDEX ROUTE ******************************* */
 
 /* /blogs - Renders main page showing list of blogs*/
@@ -16,14 +19,18 @@ router.get('/', (req, res) => {
 });
 
 /** NEW ROUTE --> /blogs/new */
-router.get('/new', (req,res)=>{
+router.get('/new', middleware.isLoggedIn, (req,res)=>{
     res.render('blogs/new');
 });
 
 /** CREATE ROUTE --> /blogs */
-router.post('/',(req,res)=>{
+router.post('/', middleware.isLoggedIn, (req,res)=>{
     /* Sends post request to blogs/index, take the form data from it in req.body */
-    var newBlog = { title: req.body.blog.title, image: req.body.blog.image, text: req.body.blog.text };
+    let author = {
+        id: req.user._id,
+        username: req.user.author
+    }
+    var newBlog = { title: req.body.blog.title, image: req.body.blog.image, text: req.body.blog.text, author:author };
 
     Blog.create(newBlog, (err, blog) =>{
         err? console.log(err):res.redirect('/blogs');
@@ -41,7 +48,7 @@ router.get('/:id', (req,res)=>{
 });
 
 // EDIT ROUTE --> /blogs/:id/edit
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', middleware.isLoggedIn, (req, res) => {
     Blog.findById(req.params.id, (err, foundBlog) => {
         err ? res.redirect('/blogs') : res.render('blogs/edit', { blog: foundBlog });
     });
@@ -51,7 +58,7 @@ router.get('/:id/edit', (req, res) => {
 // Need to find and update the correct blog
 // Method arguments finds the id then updates the values
 
-router.put('/:id', (req, res) => {
+router.put('/:id', middleware.isLoggedIn,(req, res) => {
     // Update particular blog and redirect
     Blog.findByIdAndUpdate(req.params.id, req.body.blog, (err, updatedBlog) => {
         err ? res.redirect('blogs') : res.redirect('/blogs/' + req.params.id);
@@ -59,7 +66,7 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE ROUTE
-router.delete('/:id', (req, res) => {
+router.delete('/:id', middleware.isLoggedIn, (req, res) => {
     Blog.findByIdAndRemove(req.params.id, err => {
         err ? res.redirect('/blogs') : res.redirect('/blogs');
     });

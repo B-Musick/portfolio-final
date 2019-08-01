@@ -4,10 +4,14 @@
 <img src="<%=blog.image%>" alt="">
 <div><%=blog.text%></div>
 
- <a href="/blogs/<%=blog._id%>/edit">EDIT BLOG</a>
+<!-- EDIT and DELETE (FORM) -->
+<% if(currentUser && blog.author.id.equals(currentUser._id)){ %>
+     <a href="/blogs/<%=blog._id%>/edit">Edit</a>
+    <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+<%}%>
 
-<form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
-    <button>DELETE</button>
-</form>
+
 
 <% include ../partials/footer %>
