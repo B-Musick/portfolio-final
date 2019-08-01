@@ -1,8 +1,14 @@
+body {
+    font-family: 'Grenze', serif;
+}
 .navbar {
     background-color: black;
     display: flex;
-    padding: 20px;
-    
+    padding: 20px;   
+}
+
+.navbar a:hover{
+    font-size: 1.1em;
 }
 
 .navbar-about{

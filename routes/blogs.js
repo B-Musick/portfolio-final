@@ -32,9 +32,10 @@ router.post('/',(req,res)=>{
 
 /* SHOW ROUTE --> blogs/show */
 router.get('/:id', (req,res)=>{
-    // 
+    // Loads page depending on which object from the database passed base on '._id'
     Blog.findById(req.params.id, (err, showBlog) => {
-        err ? console.log(err) : res.render('blogs/show', { plant: showBlog });
+        // Passes in 
+        err ? console.log(err) : res.render('blogs/show', { blog: showBlog });
     })
 
 })
