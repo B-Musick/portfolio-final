@@ -1,7 +1,7 @@
 <% include ../partials/header %>
 <div class="edit-blog-post-form-container">
     <!-- If don’t make the action this way, it will just create new output on the screen -->
-    <form class="edit-blog-post-form" action="/blogs/<%= blog._id %>?_method=PUT"" method=" POST">
+    <form class="edit-blog-post-form" action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
         <!-- 
             - Action will sent the data to /blogs when post request made 
             - name the inputs with blog[] so can use req.body.blog which will 
@@ -22,7 +22,7 @@
             </div>
             <div class="new-blog-post-body-input">
                 <label for="formBody">BODY</label>
-                <textarea class="form-control" id="formBody" name="blog[body]"><%=blog.text%></textarea>
+                <textarea class="form-control" id="formBody" name="blog[text]"><%=blog.text%></textarea>
             </div>
             <div class="new-blog-post-submit">
                 <input type="submit" class="">

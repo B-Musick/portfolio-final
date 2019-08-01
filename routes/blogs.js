@@ -47,4 +47,23 @@ router.get('/:id/edit', (req, res) => {
     });
 });
 
+// UPDATE ROUTE
+// Need to find and update the correct blog
+// Method arguments finds the id then updates the values
+
+router.put('/:id', (req, res) => {
+    // Update particular blog and redirect
+    Blog.findByIdAndUpdate(req.params.id, req.body.blog, (err, updatedBlog) => {
+        err ? res.redirect('blogs') : res.redirect('/blogs/' + req.params.id);
+    });
+});
+
+// DELETE ROUTE
+router.delete('/:id', (req, res) => {
+    Blog.findByIdAndRemove(req.params.id, err => {
+        err ? res.redirect('/blogs') : res.redirect('/blogs');
+    });
+});
+
+
 module.exports = router;

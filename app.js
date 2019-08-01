@@ -8,18 +8,10 @@ let express     = require('express'); // Import express package
     LocalStrategy = require('passport-local');
 
 // This is needed for the PUT request of update
-methodOverride = require("method-override");
-app.use(methodOverride("_method"));
-
-app.set('view engine', 'ejs'); // Dont have to add .ejs to files
-app.use(bodyParser.urlencoded({ extended: true }));
+let methodOverride = require('method-override');
 
 let indexRoutes = require('./routes/index');
 let blogRoutes = require('./routes/blogs');
-
-// ROUTE IMPORTS - Shorten the URLS here
-app.use('/', indexRoutes); // Import the root router
-app.use('/blogs', blogRoutes); // Import blog routes
 
 
 // MODELS
@@ -40,13 +32,21 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+app.use(methodOverride("_method"));
 
 // CONNECT THE DATABASE RUNNING ON DEFAULT PORT 27017
 mongoose.connect("mongodb://localhost:27017/portfolio"), { useNewUrlParser: true }; 
 
+app.set('view engine', 'ejs'); // Dont have to add .ejs to files
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // PREVENTS ANY BACKLASH FROM DIRECTORY CHANGES
 // Allows stylesheets to be imported to header accessing '/stylesheets'
 app.use(express.static(__dirname + "/public"));
+
+// ROUTE IMPORTS - Shorten the URLS here
+app.use('/', indexRoutes); // Import the root router
+app.use('/blogs', blogRoutes); // Import blog routes
 
 app.listen(3000,()=>{
     // Start application

@@ -1,6 +1,13 @@
 <% include ../partials/header %>
 <!-- 'blog' is passed in through the show route based of :id -->
- <div><%=blog.title%></div>
+<div><%=blog.title%></div>
+<img src="<%=blog.image%>" alt="">
+<div><%=blog.text%></div>
 
  <a href="/blogs/<%=blog._id%>/edit">EDIT BLOG</a>
+
+<form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+    <button>DELETE</button>
+</form>
+
 <% include ../partials/footer %>
