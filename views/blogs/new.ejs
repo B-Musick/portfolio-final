@@ -1,6 +1,25 @@
 <% include ../partials/header %>
     <!-- Form will post to the blogs route -->
     <form action="/blogs" method="POST">
-
+        <div class="form-container">
+            <div class="form-input-container new-blog-post-title">
+                <h2>Create New Blog</h2>
+            </div>
+            <div class="form-input-container">
+                <label for="formTitle">TITLE</label>
+                <input type="text" name="blog[title]" id="formTitle" placeholder="Title">
+            </div>
+            <div class="form-input-container">
+                <label for="formImage">IMAGE</label>
+                <input type="text" name="blog[image]" id="formImage" placeholder="Image URL">
+            </div>
+            <div class="form-input-container">
+                <label for="formText">BODY</label>
+                <textarea id="formBody" name="blog[text]">Body</textarea>
+            </div>
+            <div class="form-input-container">
+                <input type="submit">
+            </div>
+        </div>
     </form>
 <% include ../partials/footer %>

@@ -25,11 +25,6 @@ let Blog = require('./models/blog');
 // Allows stylesheets to be imported to header accessing '/stylesheets'
 app.use(express.static(__dirname + "/public"));
 
-Blog.create({
-    title: 'Portfolio',
-    image: 'hi',
-    text: 'Body of blog'
-})
 app.listen(3000,()=>{
     // Start application
     console.log('Server Ready')
