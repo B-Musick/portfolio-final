@@ -46,20 +46,91 @@ box-shadow: 11px -10px 30px -6px rgba(0,0,0,0.75);
 
     
 }
-.blog-title{
-    font-size: 2em;
+.blog-index-title{
+    font-size: 1.9em;
     
 }
-.blog-text{
+.blog-index-text{
+    font-size: 0.9em;
     align-self: center;
 }
 
-.blog-image{
+.blog-index-image {
     margin-left: 25px;
     height: 150px;
     width: 160px;
     
 }
-.user-button-container{
 
+.user-button-container{
+    display: flex;
+    justify-content: center;
+}
+.user-button-container a{
+    background-color:  rgb(37, 25, 46);
+    margin: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.user-button-container a:hover{
+    background-color:rgb(58, 39, 73);
+}
+
+@media (max-width:1010px){
+    /* When viewport is equal to or narrower than */
+    .blog-index-title{
+        font-size: 1.7em;
+    
+    }
+    .blog-index-text{
+        font-size: 0.8em;
+        align-self: center;
+    }
+    .blog-index-date{
+        font-size: 0.9em;
+    }
+}
+
+
+@media (max-width:812px){
+    /* When viewport is equal to or narrower than */
+    .blog-index-title{
+        font-size: 1.5em;
+    
+    }
+    .blog-index-text{
+        font-size: 0.7em;
+        align-self: center;
+    }
+        .blog-index-date{
+        font-size: 0.8em;
+    }
+}
+@media (max-width:678px){
+    /* When viewport is equal to or narrower than */
+    .blog-index-title{
+        font-size: 1.3em;
+    
+    }
+    .blog-index-text{
+        font-size: 0.6em;
+        align-self: center;
+    }
+        .blog-index-date{
+        font-size: 0.7em;
+    }
+}
+@media (max-width:592px){
+    /* When viewport is equal to or narrower than */
+    .column-left {
+        display: none
+    
+    
+}
+    .blog-index-title{
+        font-size: 1.0em;
+    
+    }
 }

@@ -1,17 +1,29 @@
 <% include ../partials/header %>
 <!-- 'blog' is passed in through the show route based of :id -->
-<div><%=blog.title%></div>
-<img src="<%=blog.image%>" alt="">
-<div><%=blog.text%></div>
+<div class="show-page-container">
+    <div class="blog-title">
+        <div><%=blog.title%></div>
+    </div>
+    <div class="show-page-content">
+        
+        <div class="blog-image-container">
+            <img src="<%=blog.image%>" alt="">
+        </div>
 
-<!-- EDIT and DELETE (FORM) -->
-<% if(currentUser && blog.author.id.equals(currentUser._id)){ %>
-     <a href="/blogs/<%=blog._id%>/edit">Edit</a>
-    <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
-        <button>Delete</button>
-    </form>
-<%}%>
+        <div class="blog-text"><%-blog.text%></div>
+    </div>
 
+    <div class="show-page-editing-buttons">
+        <!-- EDIT and DELETE (FORM) -->
+        <% if(currentUser && blog.author.id.equals(currentUser._id)){ %>
+            <a href="/blogs/<%=blog._id%>/edit">Edit</a>
+            <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+                <button>Delete</button>
+            </form>
+        <%}%>
+    </div>
+
+</div>
 
 
 <% include ../partials/footer %>
