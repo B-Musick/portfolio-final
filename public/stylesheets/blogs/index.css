@@ -2,24 +2,38 @@
 .blogs-page-container{
     background-color:rgb(87, 51, 114);
     padding: 30px;
-    height: 70vh;
-    overflow: hidden;
+    padding-top: 0px;
+    height: 75vh;
+    overflow: scroll;
 }
 
 .blog-container-anchor{
     text-decoration: none;
     color: white;
+    
 
 }
+
+
 .blog-container{
     /* Individual blog containers */
     background-color: rgb(37, 25, 46);
-    margin-bottom: 20px;
-    margin: 0 50px;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
     height: 200px;
     display: flex;
+-webkit-box-shadow: 11px -2px 30px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 11px -2px 30px -6px rgba(0,0,0,0.75);
+box-shadow: 11px -2px 30px -6px rgba(0,0,0,0.75);
     
     
+}
+.blog-container:hover{
+    margin-top:48px;
+-webkit-box-shadow: 11px -10px 30px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 11px -10px 30px -6px rgba(0,0,0,0.75);
+box-shadow: 11px -10px 30px -6px rgba(0,0,0,0.75);
 }
 .column-left{
     align-self: center;
@@ -42,5 +56,8 @@
     margin-left: 25px;
     height: 150px;
     width: 160px;
+    
+}
+.user-button-container{
     
 }

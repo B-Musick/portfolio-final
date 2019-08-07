@@ -11,10 +11,14 @@ var middleware = require('../middleware');
 
 /* /blogs - Renders main page showing list of blogs*/
 router.get('/', (req, res) => {
+    // Pass in months, then use blog.date.getMonth (returns number) along with this object to display month
+    let months = { '0': 'January', '1': 'February', '2': 'March', '3': 'April', 
+                    '4': 'May', '5': 'June', '6': 'July', '7': 'August', 
+                    '8': 'September', '9': 'October', '10': 'November', '11': 'December'};
     // Find returns all blogs from database ({})
     // foundBlogs will return the blogs, blogs will hold all the blogs
     Blog.find({}, (err, foundBlogs) => {
-        err ? console.log(err) : res.render('blogs/index', { blogs: foundBlogs });
+        err ? console.log(err) : res.render('blogs/index', { blogs: foundBlogs, months });
     });
 });
 

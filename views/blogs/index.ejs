@@ -11,7 +11,7 @@
                     <div class="column-right">
                         <div class="blog-title"><%=blog.title%></div>
                         <div class="blog-text"><%if(blog.text){%><%= blog.text.substring(0,300) %><%}%>...</div>
-                        <div class="blog-date"><%=blog.date%></div>
+                        <div class="blog-date"><%=months[blog.date.getMonth()]%> <%=blog.date.getDate()%>, <%=blog.date.getFullYear()%></div>
                     </div>
 
                 </div>
@@ -19,8 +19,10 @@
         <%})%>
         
         <% if(currentUser){ %>
-        <a href="/blogs/new">New Blog</a>
-        <a href="/logout">Logout</a>
+            <div class="user-button-container">
+                <a href="/blogs/new">New Blog</a>
+                <a href="/logout">Logout</a>
+            </div>
         <%}%>
     </div>
     <!-- 'blogs' comes in through the index route '.find({})' -->
