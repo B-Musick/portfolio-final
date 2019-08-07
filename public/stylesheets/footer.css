@@ -1,22 +1,26 @@
 /* SOCIAL MEDIA ICONS */
 .social-media-icon-container{
+    padding: 6px;
     height: 11vh;
-    background-color: black;
+    background-color: rgb(37, 25, 46);
     font-size:9vh !important;
     display: flex;
     justify-content: center;
+    
 
 }
 
 i {
+    
     margin-right: 2vw;
 }
 .fa-linkedin {
     /* Make linked in background white, text black  */
     font-size:9vh !important;
     height: 9vh;
-    color:black;
+    color: rgb(37, 25, 46);
     background-color:white;
     border-radius: 10px;
-    padding: 0px 2px;
+    padding: 0px 1px;
+    
 }

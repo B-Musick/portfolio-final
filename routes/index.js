@@ -4,8 +4,10 @@ let router = express.Router(),
 
 var User = require('../models/user');
 
+// ROOT ROUTE
 router.get('/', (req, res) => res.render('landing'));
 
+/****************************REGISTER ROUTES**********************************/
 
 // REGISTER SHOW ROUTE
 router.get('/register', (req, res) => res.render('register'));

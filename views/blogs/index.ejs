@@ -1,5 +1,6 @@
 <% include ../partials/header %>
-    <a href="/blogs/new">New Blog</a>
+
+    
 
     <!-- 'blogs' comes in through the index route '.find({})' -->
     <% blogs.forEach(blog =>{ %>
@@ -7,4 +8,9 @@
         <img src="<%=blog.image%>">
         <a href="/blogs/<%=blog._id%>">Show More</a>
     <%})%>
+
+    <% if(currentUser){ %>
+    <a href="/blogs/new">New Blog</a>
+    <a href="/logout">Logout</a>
+    <%}%>
 <% include ../partials/footer %>
