@@ -6,13 +6,13 @@ body {
 
 .navbar {
     background-color: rgb(37, 25, 46);
-    display: flex;
-    padding: 20px;   
+    display: flex;  
  
 }
 
 .navbar a:hover{
-    font-size: 1.1em;
+    background-color:rgb(58, 39, 73);
+    
 }
 
 .navbar-about{
@@ -26,6 +26,7 @@ body {
 }
 
 .navbar a {
+    padding: 20px;
     text-decoration: none;
     color: white;
 }
