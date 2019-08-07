@@ -1,16 +1,28 @@
 <% include ../partials/header %>
 
     
+    <div class="blogs-page-container">
+        <% blogs.forEach(blog =>{ %>
+            <a href="/blogs/<%=blog._id%>" class="blog-container-anchor">
+                <div class="blog-container">
+                    <div class="column-left">
+                        <img class="blog-image" src="<%=blog.image%>">
+                    </div>
+                    <div class="column-right">
+                        <div class="blog-title"><%=blog.title%></div>
+                        <div class="blog-text"><%if(blog.text){%><%= blog.text.substring(0,300) %><%}%>...</div>
+                        <div class="blog-date"><%=blog.date%></div>
+                    </div>
 
+                </div>
+            </a>
+        <%})%>
+        
+        <% if(currentUser){ %>
+        <a href="/blogs/new">New Blog</a>
+        <a href="/logout">Logout</a>
+        <%}%>
+    </div>
     <!-- 'blogs' comes in through the index route '.find({})' -->
-    <% blogs.forEach(blog =>{ %>
-        <div><%=blog.title%></div>
-        <img src="<%=blog.image%>">
-        <a href="/blogs/<%=blog._id%>">Show More</a>
-    <%})%>
 
-    <% if(currentUser){ %>
-    <a href="/blogs/new">New Blog</a>
-    <a href="/logout">Logout</a>
-    <%}%>
 <% include ../partials/footer %>

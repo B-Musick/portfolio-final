@@ -1,0 +1,46 @@
+
+.blogs-page-container{
+    background-color:rgb(87, 51, 114);
+    padding: 30px;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.blog-container-anchor{
+    text-decoration: none;
+    color: white;
+
+}
+.blog-container{
+    /* Individual blog containers */
+    background-color: rgb(37, 25, 46);
+    margin-bottom: 20px;
+    margin: 0 50px;
+    height: 200px;
+    display: flex;
+    
+    
+}
+.column-left{
+    align-self: center;
+}
+.column-right{
+    padding: 7px;
+    padding-left: 30px;
+
+    
+}
+.blog-title{
+    font-size: 2em;
+    
+}
+.blog-text{
+    align-self: center;
+}
+
+.blog-image{
+    margin-left: 25px;
+    height: 150px;
+    width: 160px;
+    
+}

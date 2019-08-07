@@ -55,7 +55,7 @@ app.use(express.static(__dirname + "/public"));
 app.use('/', indexRoutes); // Import the root router
 app.use('/blogs', blogRoutes); // Import blog routes
 
-app.listen(3000,()=>{
+app.listen(3002,()=>{
     // Start application
     console.log('Server Ready')
 });
