@@ -1,16 +1,21 @@
 /* SOCIAL MEDIA ICONS */
 .social-media-icon-container{
-    padding: 6px;
-    height: 11vh;
+    
+    height: 16vh;
+    width:100vw;
     background-color: rgb(37, 25, 46);
     font-size:9vh !important;
     display: flex;
     justify-content: center;
+    padding-bottom: 6px;
+
     
 
 }
-
-i {
+.social-media-icon-container a {
+    margin-top: 0;
+}
+.social-media-icon-container i {
     
     margin-right: 2vw;
 }
@@ -18,6 +23,8 @@ i {
     /* Make linked in background white, text black  */
     font-size:9vh !important;
     height: 9vh;
+    
+    
     color: rgb(37, 25, 46);
     background-color:white;
     border-radius: 10px;

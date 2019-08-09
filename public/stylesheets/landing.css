@@ -2,22 +2,25 @@
 /* LANDING PAGE MISSION STATEMENT */
 .name-mission-statement{
     /* Will take up the whole page besides the header */
-    height: 91vh;
+    height: 74vh;
     width: 100vw;
     display:flex;
     justify-content: flex-end;
     background-color: rgb(87, 51, 114);
+    
 }
 .mission-statement-headshot{
     background: url(https://imgur.com/zzbfnJd.jpg) no-repeat linear-gradient(to right, white, transparent 90%);;
-    height: 91vh;
-    width: 450px;
-    background-size: cover; 
-background-image: -webkit-linear-gradient(left, 
-    rgba(87, 51, 114, 1) 3%, 
-    rgba(0,0,0,0) 20%,
-    rgba(0,0,0,0) 80%,
-    rgba(0,0,0,0) 3%
-  ),
+    height: 74vh;
+    width: 30vw;
+    background-size: cover;
+    
+    background-image: -webkit-linear-gradient(left, 
+            rgba(87, 51, 114, 1) 3%, 
+            rgba(0,0,0,0) 20%,
+            rgba(0,0,0,0) 80%,
+            rgba(0,0,0,0) 3%
+        ),
   url(https://imgur.com/zzbfnJd.jpg);
 }
+

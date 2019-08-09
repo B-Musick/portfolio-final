@@ -1,0 +1,33 @@
+.page-container{
+    height: 73vh;
+    width: 100vw;
+    background-color: rgb(87, 51, 114);
+}
+.page-row-1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project-1{
+    display: flex;
+    justify-content: center;
+    width: 27vw;
+    height: 30vw;
+    background-color:  rgb(37, 25, 46);
+    margin-top: 8vh;
+    min-width: 250px;
+    min-height: 280px;
+    overflow: scroll;
+    -webkit-box-shadow: 11px -2px 30px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 11px -2px 30px -6px rgba(0,0,0,0.75);
+box-shadow: 11px -2px 30px -6px rgba(0,0,0,0.75);
+
+}
+
+.project-1 img{
+    margin-top: 1.2vw;
+    width: 24vw;
+    height: 15vw;
+    min-width: 230px;
+    min-height: 140px;
+}

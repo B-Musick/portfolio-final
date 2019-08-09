@@ -12,6 +12,7 @@ let methodOverride = require('method-override');
 
 let indexRoutes = require('./routes/index');
 let blogRoutes = require('./routes/blogs');
+let projectRoutes = require('./routes/projects');
 
 
 // MODELS
@@ -54,8 +55,9 @@ app.use(express.static(__dirname + "/public"));
 // Need to be at the bottom ? wasnt letting me create new blog, edit
 app.use('/', indexRoutes); // Import the root router
 app.use('/blogs', blogRoutes); // Import blog routes
+app.use('/projects',projectRoutes); // Import project routes
 
-app.listen(3002,()=>{
+app.listen(3000,()=>{
     // Start application
     console.log('Server Ready')
 });
