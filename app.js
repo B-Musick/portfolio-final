@@ -6,14 +6,17 @@ let express     = require('express'); // Import express package
     bodyParser  = require('body-parser'),
     passport = require('passport'),
     LocalStrategy = require('passport-local');
+    d3 = require('d3');
 
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, '..', 'app')));
 // This is needed for the PUT request of update
 let methodOverride = require('method-override');
 
 let indexRoutes = require('./routes/index');
 let blogRoutes = require('./routes/blogs');
 let projectRoutes = require('./routes/projects');
-
 
 // MODELS
 let Blog = require('./models/blog');
@@ -49,6 +52,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // PREVENTS ANY BACKLASH FROM DIRECTORY CHANGES
 // Allows stylesheets to be imported to header accessing '/stylesheets'
+// Serve static assets
 app.use(express.static(__dirname + "/public"));
 
 // ROUTE IMPORTS - Shorten the URLS here
@@ -56,6 +60,8 @@ app.use(express.static(__dirname + "/public"));
 app.use('/', indexRoutes); // Import the root router
 app.use('/blogs', blogRoutes); // Import blog routes
 app.use('/projects',projectRoutes); // Import project routes
+
+
 
 app.listen(3000,()=>{
     // Start application
