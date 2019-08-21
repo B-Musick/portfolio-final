@@ -45,7 +45,7 @@ app.use(function (req, res, next) {
 app.use(methodOverride("_method"));
 
 // CONNECT THE DATABASE RUNNING ON DEFAULT PORT 27017
-mongoose.connect("mongodb+srv://brendan:tootootreetree@portfolio-cluster-je0rn.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect(process.env.DATABASEURL, {
     userNewUrlParser: true,
     useCreateIndex: true
 }).then(() => {
@@ -78,3 +78,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${PORT}`);
 });
+
