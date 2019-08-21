@@ -70,7 +70,11 @@ app.use('/projects',projectRoutes); // Import project routes
 
 
 
-app.listen(3000,()=>{
-    // Start application
-    console.log('Server Ready')
+// app.listen(3000,()=>{
+//     // Start application
+//     console.log('Server Ready')
+// });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${PORT}`);
 });
