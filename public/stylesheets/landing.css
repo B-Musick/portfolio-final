@@ -2,7 +2,7 @@
 /* LANDING PAGE MISSION STATEMENT */
 .name-mission-statement{
     /* Will take up the whole page besides the header */
-    height: 74vh;
+    height: 78vh;
     width: 100vw;
     display:flex;
     justify-content: flex-end;
@@ -11,7 +11,7 @@
 }
 .mission-statement-headshot{
     background: url(https://imgur.com/zzbfnJd.jpg) no-repeat linear-gradient(to right, white, transparent 90%);;
-    height: 74vh;
+    height: 78vh;
     width: 30vw;
     background-size: cover;
     

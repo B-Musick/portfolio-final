@@ -11,6 +11,7 @@ let express     = require('express'); // Import express package
 const path = require('path');
 
 app.use(express.static(path.join(__dirname, '..', 'app')));
+
 // This is needed for the PUT request of update
 let methodOverride = require('method-override');
 
@@ -45,14 +46,15 @@ app.use(function (req, res, next) {
 app.use(methodOverride("_method"));
 
 // CONNECT THE DATABASE RUNNING ON DEFAULT PORT 27017
-mongoose.connect(process.env.DATABASEURL, {
-    userNewUrlParser: true,
-    useCreateIndex: true
-}).then(() => {
-    console.log("Connected to DB!");
-}).catch(err => {
-    console.log("Error: ", err.message);
-});
+mongoose.connect("mongodb://localhost:27017/portfolio"), { useNewUrlParser: true }; 
+// mongoose.connect(process.env.DATABASEURL, {
+//     userNewUrlParser: true,
+//     useCreateIndex: true
+// }).then(() => {
+//     console.log("Connected to DB!");
+// }).catch(err => {
+//     console.log("Error: ", err.message);
+// });
 
 app.set('view engine', 'ejs'); // Dont have to add .ejs to files
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -67,7 +69,6 @@ app.use(express.static(__dirname + "/public"));
 app.use('/', indexRoutes); // Import the root router
 app.use('/blogs', blogRoutes); // Import blog routes
 app.use('/projects',projectRoutes); // Import project routes
-
 
 
 // app.listen(3000,()=>{
