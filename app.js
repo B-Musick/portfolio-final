@@ -46,15 +46,15 @@ app.use(function (req, res, next) {
 app.use(methodOverride("_method"));
 
 // CONNECT THE DATABASE RUNNING ON DEFAULT PORT 27017
-mongoose.connect("mongodb://localhost:27017/portfolio"), { useNewUrlParser: true }; 
-// mongoose.connect(process.env.DATABASEURL, {
-//     userNewUrlParser: true,
-//     useCreateIndex: true
-// }).then(() => {
-//     console.log("Connected to DB!");
-// }).catch(err => {
-//     console.log("Error: ", err.message);
-// });
+// mongoose.connect("mongodb://localhost:27017/portfolio"), { useNewUrlParser: true }; 
+mongoose.connect(process.env.DATABASEURL, {
+    userNewUrlParser: true,
+    useCreateIndex: true
+}).then(() => {
+    console.log("Connected to DB!");
+}).catch(err => {
+    console.log("Error: ", err.message);
+});
 
 app.set('view engine', 'ejs'); // Dont have to add .ejs to files
 app.use(bodyParser.urlencoded({ extended: true }));
