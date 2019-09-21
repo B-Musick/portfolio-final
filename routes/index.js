@@ -8,7 +8,8 @@ var User = require('../models/user');
 router.get('/', (req, res) => res.render('landing'));
 
 /****************************REGISTER ROUTES**********************************/
-
+// USE HTTP METHODS (GET, POST), which take a relative path on the server and a handler
+// handles epress calls when route is matched (app.METHOD(PATH, HANDLER))
 // REGISTER SHOW ROUTE
 router.get('/register', (req, res) => res.render('register'));
 

@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
 
+// Schema define shape of documents in collection and are building block for models
+// Allow you to create instances of the object
 let blogSchema = new mongoose.Schema({
     title: String,
     image: String,
