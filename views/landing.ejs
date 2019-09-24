@@ -5,28 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/stylesheets/landing.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Mansalva|Turret+Road:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- PROJECT STYLESHEETS -->
+        <link rel="stylesheet" href="/stylesheets/projects/index.css">
    
-    <title>Document</title>
+    <title>Brendan Musick</title>
 </head>
 <body>
     
 
     <main class="name-mission-statement">
-        <div class="landing-foldable landing-button-transition" id="landing-about">BRENDAN MUSICK</div>
+        <div class="landing-foldable landing-button-transition" id="landing-brendan">BRENDAN MUSICK</div>
+        <div class="landing-foldable" id="landing-about">ABOUT</div>
         <div class="landing-foldable" id="landing-mission">MISSION</div>
         <div class="landing-foldable" id="landing-technologies">TECH</div>
         <div class="landing-foldable" id="landing-learning">LEARNING</div>
+        <a href="/projects"></a><div class="landing-foldable" id="landing-projects">PROJECTS</div></a>
+
 <!-- <div class="landing-foldable" id="landing-learning"><p class="button-text" id="landing-learning-text">LEARNING</p> -->
     <!-- Was used to flip the words along with transform -->
-        
+
         <!-- <div class="mission-statement-headshot"></div> -->
         <div class="description">
             <!-- Each div will show depending on what button is pressd -->
-            <div id="about-description-container">
+            <div id="about-description-container" class="description-container">
                 <!--  class="about-description-container" -->
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, qui delectus vero, nisi quibusdam ratione aliquid
-                    rem deleniti, nobis pariatur quam perferendis enim dolorum dolore officia placeat aut soluta facere? </p>
+                <p> After having obtained a Bachelor of Science in Biology and 
+                    working in the conservation sector for that past 4 years. I first
+                    introduced myself to Pro </p>
             </div>
             <div class="description-container" id="mission-description-container">
                 <!--  class="about-description-container" -->
@@ -66,9 +74,129 @@
                                         nobis quasi dolorum deserunt. Corporis laboriosam accusamus facere, magnam cum pariatur quibusdam obcaecati.
                 </p>
             </div>
+
+            <div class="description-inside-screen" id="brendan-description-container">
+                <div id="description-column">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto quidem vero, exercitationem sit eveniet soluta rerum deserunt corrupti ullam voluptatum id, cumque maxime quo debitis placeat. Cupiditate cum magni facilis.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto quidem vero, exercitationem sit eveniet soluta
+                        rerum deserunt corrupti ullam voluptatum id, cumque maxime quo debitis placeat. Cupiditate cum magni facilis.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto quidem vero, exercitationem sit eveniet soluta
+                        rerum deserunt corrupti ullam voluptatum id, cumque maxime quo debitis placeat. Cupiditate cum magni facilis.</p>
+
+                </div>
+                <div id="image-column">
+                    <img src="https://i.imgur.com/zzbfnJd.jpg?1.jpg" alt="Brendans Image">
+                </div>
+            </div>
         </div>
+        
+        <!----------------------------------- PROJECTS --------------------------------->
+        <div class="description-container" id="projects-description-container">
+
+            <div class="page-container">
+                <div class="page-row-1">
+                    <div class="project">
+                        <img class="project-image" src="https://i.imgur.com/tkaCN78.png"></img>
+                        <div class="project-text">
+                            <div class="project-title">2048</div>
+                            <div class="project-description">My own recreation of a game created by Gabriella
+                                Cirulli.</div>
+                            <div class="project-links">
+                                <a href="/projects/2048">
+                                    <div class="anchor-title">PLAY</div>
+                                </a>
+                                <a href="https://github.com/B-Musick/2048-game">
+                                    <div class="project-git-link">GIT REPOSITORY</div>
+                                </a>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="project">
+                        <img class="project-image" src="https://i.imgur.com/vxvcOov.png"></img>
+                        <div class="project-text">
+                            <div class="project-title">(RootedInNature)<sup>2</sup></div>
+                            <div class="project-description">Website I created for posting plants, nature blogs, and for general
+                                scientific
+                                knowledge.</div>
+                            <div class="project-links">
+                                <a href="/projects/2048">
+                                    <div class="anchor-title">VISIT</div>
+                                </a>
+                                <a href="#">
+                                    <div href="https://github.com/B-Musick/rooted-in-nature-final" class="project-git-link">GIT
+                                        REPOSITORY
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="project">
+                        <img class="project-image" src="https://i.imgur.com/mBCNf4W.png"></img>
+                        <div class="project-text">
+                            <div class="project-title">Calculator</div>
+                            <div class="project-description">Fully working calculator with basic operations.</div>
+                            <div class="project-links">
+                                <a href="/projects/calculator">
+                                    <div class="anchor-title">CALCULATE</div>
+                                </a>
+                                <a
+                                    href="https://github.com/B-Musick/FREECODECAMP/tree/master/FRONT_END_LIRARIES/FRONT_END_LIBRARY_PROJECTS/CALCULATOR/calculator_vanilla">
+                                    <div class="project-git-link">GIT REPOSITORY</div>
+                                </a>
+                            </div>
+                        </div>
+            
+            
+                    </div>
+                    <div class="project">
+                        <img class="project-image" src="https://i.imgur.com/RCqZpbb.png"></img>
+                        <div class="project-text">
+                            <div class="project-title">Pomodor Clock</div>
+                            <div class="project-description">Pomodoro clock to keep goals on time. Built using React.</div>
+                            <div class="project-links">
+                                <a href="https://codepen.io/B-Musick/full/eqPpyQ">
+                                    <div class="anchor-title">START TIMING</div>
+                                </a>
+                                <a
+                                    href="https://github.com/B-Musick/FREECODECAMP/tree/master/FRONT_END_LIRARIES/FRONT_END_LIBRARY_PROJECTS/POMODORO_CLOCK/pomodoro-clock">
+                                    <div class="project-git-link">GIT REPOSITORY</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img class="project-image" src="https://i.imgur.com/RCqZpbb.png"></img>
+                        <div class="project-text">
+                            <div class="project-title">Pomodor Clock</div>
+                            <div class="project-description">Pomodoro clock to keep goals on time. Built using React.</div>
+                            <div class="project-links">
+                                <a href="https://codepen.io/B-Musick/full/eqPpyQ">
+                                    <div class="anchor-title">START TIMING</div>
+                                </a>
+                                <a
+                                    href="https://github.com/B-Musick/FREECODECAMP/tree/master/FRONT_END_LIRARIES/FRONT_END_LIBRARY_PROJECTS/POMODORO_CLOCK/pomodoro-clock">
+                                    <div class="project-git-link">GIT REPOSITORY</div>
+                                </a>
+                            </div>
+                        </div>
+            
+            
+                    </div>
+            
+            
+                </div>
+            
+            </div>
+        </div>
+    
+
+        
     </main>
 
-    <script src="/scripts/landing.js"></script>
-
 <% include ./partials/footer %>
+
+    
+
+

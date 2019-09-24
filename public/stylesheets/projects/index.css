@@ -1,33 +1,36 @@
 .page-container{
-    height: 79vh;
-    width: 100vw;
+    
     background-color: rgb(87, 51, 114);
     overflow:scroll;
 
 }
 .page-row-1{
+    
+    height: 68vh;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    overflow: scroll;
+    padding-top: 10px;
 }
 @media(max-width:500px){
-    .page-row-1{
+    /* .page-row-1{
         display: flex;
        flex-direction: column;
        align-content: center;
        margin-bottom: 30px;
-    }
+    } */
 }
 .project{
-    
+    margin-right: 30px;
     display: block;
     justify-content: center;
     flex-wrap: wrap;
     /* width: 27vw;
     height: 30vw; */
     background-color:  rgb(37, 25, 46);
-    margin-top: 8vh;
+    margin-top: 3vh;
     
     width: 250px;
     height: 295px;
@@ -95,4 +98,19 @@ position: relative;
 }
 .project-git-link{
     margin-top: 6px;
+}
+
+@media(max-width: 515px){
+    .page-row-1{
+        
+        display: flex;
+        justify-content: space-evenly;
+        
+        
+        
+        margin-bottom: 60px;
+        overflow: scroll;
+        padding-top: 10px;
+    }
+    
 }
