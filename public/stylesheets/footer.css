@@ -1,15 +1,27 @@
-/* SOCIAL MEDIA ICONS */
-.social-media-icon-container{
-    
-    
+.footer{
     width:100vw;
     background-color: rgb(37, 25, 46);
+    color: white;
+    display: flex;
+    
+    justify-content: space-evenly;
+    padding: 2.3vh;
+    position: fixed;
+    bottom: 0;
+}
+.footer a{
+    margin-top: 24px;
+    text-decoration: none;
+    color: white;
+}
+/* SOCIAL MEDIA ICONS */
+.social-media-icon-container{
     font-size:7vh !important;
     display: flex;
     justify-content: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+
+
+
     
 
 }

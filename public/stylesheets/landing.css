@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black|Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap');
 /* LANDING PAGE MISSION STATEMENT */
 body{
     margin:0;
     padding:0;
     height: 100vh;
     /* font-family: 'Archivo Black', sans-serif; */
-    font-family: 'Sigmar One', cursive;
+    /* font-family: 'Sigmar One', cursive;
+     */
+     font-family: 'Saira Stencil One', cursive;
+     
     
 
 }
@@ -74,6 +78,9 @@ body{
 
 }
 
+.landing-foldable:hover{
+    filter: brightness(120%);
+}
 #landing-brendan{
     background-color: rgb(37, 25, 46);
     margin-top: 18vh; 
@@ -105,6 +112,7 @@ body{
 }
 .landing-button-transition{
     /* transition the button to the top of page  */
+    filter: brightness(120%) !important;
     width: 100%;
     height: 13vh;
     font-size: 5vh !important;
@@ -164,7 +172,7 @@ body{
     position: absolute;
     top: 0px;
     font-family: 'Archivo Black', sans-serif;
-        display: block;
+    display: block;
     overflow: scroll;
     
     transition: top;
@@ -219,7 +227,7 @@ body{
 }
 
 #projects-description-container{
-    margin-top: 16vh;
+    margin-top: 15vh;
     
     left: 14vw;
     
@@ -244,7 +252,7 @@ body{
 }
 @media(max-width:370px){
     .landing-foldable{
-        font-size: 6px;
+        font-size: 8px;
     }
     .foldable-retreat{
         font-size: 6px !important;
