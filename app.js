@@ -12,11 +12,23 @@ let express     = require('express'); // Import express package
     bodyParser  = require('body-parser'),
     passport = require('passport'),
     LocalStrategy = require('passport-local');
-    d3 = require('d3');
+    d3 = require('d3')
+    helmet = require('helmet'),
+    dotenv = require('dotenv'); // Required to read .env file
 
 const path = require('path');
 
 app.use(express.static(path.join(__dirname, '..', 'app')));
+
+// Configure the .env file
+dotenv.config();
+
+app.use(helmet({
+    frameguard: { // configure
+        action: 'deny'
+    }
+
+}));
 
 // This is needed for the PUT request of update
 let methodOverride = require('method-override');
@@ -31,7 +43,7 @@ let User = require('./models/user');
 
 /**************************PASSPORT CONFIGURATION *************************** */
 app.use(require('express-session')({
-    secret: 'You are the coolest',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false
 }));

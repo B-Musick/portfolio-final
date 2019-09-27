@@ -40,6 +40,7 @@ router.post('/login', passport.authenticate('local',
 
 // LOGOUT ROUTE
 router.get('/logout', function (req, res) {
+    
     req.logout();
     res.redirect('/blogs');
 });
