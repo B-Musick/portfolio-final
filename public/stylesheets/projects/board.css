@@ -81,3 +81,9 @@ ul li{
     color: yellow !important;
     border: 5px solid black;
 }
+
+@media(max-width:465px){
+    #score-banner{
+        margin-top: 20px;
+    }
+}
