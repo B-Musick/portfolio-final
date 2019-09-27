@@ -362,7 +362,7 @@ let playGame=(arr)=>{
     });
 
 
-    document.addEventListener('click', (e) => {
+    document.addEventListener('pointerdown', (e) => {
         console.log(e.srcElement.classList[0])
         // Shift the board when the matching keycode pressed
         if (!board.gameOver()) {
