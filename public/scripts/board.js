@@ -364,8 +364,8 @@ let playGame=(arr)=>{
     });
 
 
-    document.addEventListener('pointerdown', (e) => {
-        e.preventDefault();
+    document.addEventListener('touchstart', (e) => {
+        // e.preventDefault();
         console.log(e.srcElement.classList[0])
         // Shift the board when the matching keycode pressed
         if (!board.gameOver()) {
