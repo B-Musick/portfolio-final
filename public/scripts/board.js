@@ -158,6 +158,7 @@ class Board {
             .style('stroke', 'black')
             .style('stroke-width', 5)
             .attr('class',id)
+            .style('touch-action','none');
 
         board.append('text')
             .text(zero ? '' :grid[i][j] + "") // If zero put blank '', else put the value
