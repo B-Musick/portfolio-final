@@ -92,10 +92,40 @@ class Board {
             for (let j = 0; j < grid.length; j++) {          
                 if(grid[i][j] === 0){
                     // If grid tile === 0
-                    this.setTile(this.boardDisplay, this.blockWidth, i, j, true,this.grid,grid[i][j]);
+                    if((i===0 && (j===1 || j===2)) ){
+                        // If one of the two middle top tiles pressed
+                        this.setTile(this.boardDisplay, this.blockWidth, i, j, true, this.grid, grid[i][j],'UP')
+                    } else if ((i === 3 && (j === 1 || j === 2))){
+                        // If one of the two bottom tiles pressed
+                        this.setTile(this.boardDisplay, this.blockWidth, i, j, true, this.grid, grid[i][j],"DOWN");
+                    } else if ((j === 0 && (i === 1 || i === 2))) {
+                        // If one of the two left tiles pressed
+                        this.setTile(this.boardDisplay, this.blockWidth, i, j, true, this.grid, grid[i][j], "LEFT");
+                    } else if ((j === 3 && (i === 1 || i === 2))) {
+                        // If one of the two right tiles pressed
+                        this.setTile(this.boardDisplay, this.blockWidth, i, j, true, this.grid, grid[i][j], "RIGHT");
+                    }else{
+                        this.setTile(this.boardDisplay, this.blockWidth, i, j, true, this.grid, grid[i][j]);
+                    }
+                    
                 }else{
                     // If doesnt equal 0 then place value in rect
-                    this.setTile(this.boardDisplay, this.blockWidth, i, j, false,this.grid,grid[i][j]);
+
+                    if ((i === 0 && (j === 1 || j === 2))) {
+                        // If one of the two middle top tiles pressed
+                        this.setTile(this.boardDisplay, this.blockWidth, i, j, false, this.grid, grid[i][j], 'UP')
+                    } else if ((i === 3 && (j === 1 || j === 2))) {
+                        // If one of the two bottom tiles pressed
+                        this.setTile(this.boardDisplay, this.blockWidth, i, j, false, this.grid, grid[i][j], "DOWN");
+                    } else if ((j === 0 && (i === 1 || i === 2))) {
+                        // If one of the two left tiles pressed
+                        this.setTile(this.boardDisplay, this.blockWidth, i, j, false, this.grid, grid[i][j], "LEFT");
+                    } else if ((j === 3 && (i === 1 || i === 2))) {
+                        // If one of the two right tiles pressed
+                        this.setTile(this.boardDisplay, this.blockWidth, i, j, false, this.grid, grid[i][j], "RIGHT");
+                    } else {
+                        this.setTile(this.boardDisplay, this.blockWidth, i, j, false, this.grid, grid[i][j]);
+                    }
                 }           
             }
         }
@@ -113,7 +143,7 @@ class Board {
 
     }
 
-    setTile(board,blockWidth,i,j,zero,grid,value){
+    setTile(board,blockWidth,i,j,zero,grid,value,id){
         // This will control the tiles in printBoard()
         // If value is zero (true or false)
         // board is the svg display
@@ -127,6 +157,7 @@ class Board {
             .style('fill', zero ? '#d98b8b':this.color[value]) 
             .style('stroke', 'black')
             .style('stroke-width', 5)
+            .attr('class',id)
 
         board.append('text')
             .text(zero ? '' :grid[i][j] + "") // If zero put blank '', else put the value
@@ -136,7 +167,7 @@ class Board {
             .attr('y', (this.blockWidth / 2 + (this.blockWidth * i)) + 3)
             .style('fill', 'black')
             .style('text-align', 'center');
-        console.log()
+        
     }
 
     extractLine(i, vertical, reverse){
@@ -238,7 +269,7 @@ class Board {
 
         this.score+=value;
 
-        console.log(this.score);
+        // console.log(this.score);
     }
 
     boardShift(thisBoard, reverse, vertical){
@@ -301,10 +332,17 @@ class Board {
 
 
 let playGame=(arr)=>{
+
+    let directionalClick ={
+        "LEFT":'j',
+        "RIGHT":'l',
+        "UP":'i',
+        "DOWN":'k'
+    }
+
     let board = new Board(arr);
     board.printBoard();
 
-    
     document.addEventListener('keydown',move=(e)=>{
         // Shift the board when the matching keycode pressed
         if (!board.gameOver()) {
@@ -322,6 +360,28 @@ let playGame=(arr)=>{
             console.log('Game Over!');
         }
     });
+
+
+    document.addEventListener('click', (e) => {
+        console.log(e.srcElement.classList[0])
+        // Shift the board when the matching keycode pressed
+        if (!board.gameOver()) {
+            board.shift(directionalClick[e.srcElement.classList[0]]);
+            board.printBoard();
+        } else {
+            // If the game is over, print to screen and remove keylistener for keydown
+            d3.select('body').append('h1')
+                .attr('id', 'game-over')
+                .text('GAME OVER!')
+                .style('color', 'black')
+                .style('text-align', 'center');
+            board.printBoard();
+            document.removeEventListener('keydown', move);
+            console.log('Game Over!');
+        }
+    });
+
+    
 
 }
 

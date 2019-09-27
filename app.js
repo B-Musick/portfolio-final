@@ -48,10 +48,17 @@ app.use(require('express-session')({
     saveUninitialized: false
 }));
 
+// TELL EXPRESS APP TO USE PASSPORT
 app.use(passport.initialize());
 app.use(passport.session());
+
+// AUTHENTICATE SOMEONE LOCALLY
 passport.use(new LocalStrategy(User.authenticate()));
 
+/* To serialize means converting objects contents into a small key that can then 
+be deserialized into the original object. This allows us to know whos communicated 
+with the server without having to send the authentication data like username and 
+password at each request for a new page */
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
@@ -64,7 +71,7 @@ app.use(function (req, res, next) {
 app.use(methodOverride("_method"));
 
 // CONNECT THE DATABASE RUNNING ON DEFAULT PORT 27017
-mongoose.connect("mongodb://localhost:27017/portfolio"), { useNewUrlParser: true }; 
+mongoose.connect(process.env.LOCAL_DATABASE), { useNewUrlParser: true }; 
 
 // CONNECT TO MONGODB ATLAS DATABASE - pass URI key to connect
 // mongoose.connect(process.env.DATABASEURL, {
