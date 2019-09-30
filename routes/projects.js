@@ -1,6 +1,7 @@
 let express = require('express');
 let router = express.Router();
 let path = require('path');
+let Score = require('../models/score');
 
 router.get('/',(req,res)=>{
     res.render('projects/index')
@@ -12,9 +13,36 @@ router.get('/',(req,res)=>{
 - res.sendFile() instructs browser how to handle file you want to send
 - Use '..' to go back a file
 */
+
+/******************************** 2048 ************************************ */
 router.get('/2048',(req,res)=>{
-    res.sendFile(path.join(__dirname,'..','views/projects/2048/index.html'));
+    
+    Score.find().sort({score: -1}).exec((err, foundScores) => {
+        err ? console.log(err) : res.render('projects/2048/index', { scores: foundScores});
+    });
 })
+
+// CREATE ROUTE
+router.post('/2048/:score', (req, res) => {
+    // Get score from the screen 
+    
+    let scoreVal = parseInt(req.params.score);
+    // Send post requrest to landing page the post to the landing page
+    let newScore = { player: req.body.score.player, score: scoreVal};
+
+    Score.create(newScore, (err, score) => {
+        // If score works then redirect to the landing page
+        err ? console.log(err) : res.redirect('/');
+    });
+
+})
+
+// SHOW ROUTE
+// router.get('/:id', (req, res) => {
+//     Post.findById(req.params.id).populate('comments').exec((err, showPost) => {
+//         err ? console.log(err) : res.render("posts/show", { post: showPost })
+//     })
+// })
 
 router.get('/calculator', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views/projects/calculator/index.html'));

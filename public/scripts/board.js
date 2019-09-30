@@ -344,19 +344,41 @@ let playGame=(arr)=>{
 
     let board = new Board(arr);
     board.printBoard();
-
+    // <div id="game-over-display" class="game-over-form-no-display">
+    //     <h1>GAME OVER!</h1>
+    //     <form action="/projects/2048/"></form> method="POST">
+    //             <p id="game-over-initials">PLAYER INITIALS</p>
+    //     <input id="game-over-input" type="text" name="score[player]">
+    //         <input type="submit">
+    //         </form>
+    //     </div>
     document.addEventListener('keydown',move=(e)=>{
         // Shift the board when the matching keycode pressed
         if (!board.gameOver()) {
             board.shift((String.fromCharCode(e.keyCode)).toLowerCase());
             board.printBoard();  
         }else{
+            let score = d3.select('#score-value').text();
             // If the game is over, print to screen and remove keylistener for keydown
             d3.select('body').append('h1')
                 .attr('id','game-over')
                 .text('GAME OVER!')
                 .style('color', 'black')
-                .style('text-align', 'center');
+                .style('text-align', 'center')
+                .append('form')
+                .attr('action','/projects/2048/'+score)
+                .attr('method','POST')
+                .attr('id','game-over-form')
+                .append('input')
+                .attr('name','score[player]')
+                .attr('type','text');
+
+            d3.select('#game-over-form')
+                .append('input')
+                .attr('type','submit');
+
+
+
             board.printBoard();
             document.removeEventListener('keydown',move);
             console.log('Game Over!');
@@ -373,11 +395,25 @@ let playGame=(arr)=>{
             board.printBoard();
         } else {
             // If the game is over, print to screen and remove keylistener for keydown
+
             d3.select('body').append('h1')
                 .attr('id', 'game-over')
                 .text('GAME OVER!')
                 .style('color', 'black')
-                .style('text-align', 'center');
+                .style('text-align', 'center')
+                .append('form')
+                .attr('action', '/projects/2048/' + score)
+                .attr('method', 'POST')
+                .attr('id', 'game-over-form')
+                .append('input')
+                .attr('name', 'score[player]')
+                .attr('type', 'text');
+
+            d3.select('#game-over-form')
+                .append('input')
+                .attr('type', 'submit');
+
+                
             board.printBoard();
             document.removeEventListener('keydown', move);
             console.log('Game Over!');
@@ -390,7 +426,7 @@ let playGame=(arr)=>{
 
 // Start game
 
-playGame([[2, 2, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]);
+playGame([[2, 2, 256, 256], [256, 2048, 256, 256], [4, 2, 8, 256], [2048, 256, 2048, 256]]);
 
 
 
