@@ -64,7 +64,9 @@ ul li{
     -moz-box-shadow: 13px -11px 65px 0px rgba(0,0,0,0.75);
     box-shadow: 13px -11px 65px 0px rgba(0,0,0,0.75);
 }
-
+.controls{
+    text-transform: uppercase;
+}
 #rules{
     padding:5px;
     
