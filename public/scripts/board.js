@@ -353,6 +353,8 @@ let playGame=(arr)=>{
         }else{
             let score = d3.select('#score-value').text();
             // If the game is over, print to screen and remove keylistener for keydown
+            document.removeEventListener('touchstart', move);
+            document.removeEventListener('keydown', move);
             d3.select('body').append('h1')
                 .attr('id','game-over')
                 .text('GAME OVER!')
@@ -373,8 +375,7 @@ let playGame=(arr)=>{
 
 
             board.printBoard();
-            document.removeEventListener('touchstart', move);
-            document.removeEventListener('keydown',move);
+           
             console.log('Game Over!');
         }
     });
@@ -390,7 +391,8 @@ let playGame=(arr)=>{
         } else {
             let score = d3.select('#score-value').text();
             // If the game is over, print to screen and remove keylistener for keydown
-
+            document.removeEventListener('touchstart', move);
+            document.removeEventListener('keydown', move);
             d3.select('body').append('h1')
                 .attr('id', 'game-over')
                 .text('GAME OVER!')
@@ -410,8 +412,7 @@ let playGame=(arr)=>{
 
                 
             board.printBoard();
-            document.removeEventListener('touchstart', move);
-            document.removeEventListener('keydown', move);
+
             console.log('Game Over!');
         }
     });
