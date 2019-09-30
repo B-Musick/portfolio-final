@@ -32,7 +32,7 @@ router.post('/2048/:score', (req, res) => {
 
     Score.create(newScore, (err, score) => {
         // If score works then redirect to the landing page
-        err ? console.log(err) : res.redirect('/');
+        err ? console.log(err) : res.redirect('/2048');
     });
 
 })
