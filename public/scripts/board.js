@@ -394,6 +394,7 @@ let playGame=(arr)=>{
             board.shift(directionalClick[e.srcElement.classList[0]]);
             board.printBoard();
         } else {
+            let score = d3.select('#score-value').text();
             // If the game is over, print to screen and remove keylistener for keydown
 
             d3.select('body').append('h1')
@@ -426,9 +427,9 @@ let playGame=(arr)=>{
 
 // Start game
 
-// playGame([[2, 2, 256, 256], [256, 2048, 256, 256], [4, 2, 8, 256], [2048, 256, 2048, 256]]);
+playGame([[2, 2, 256, 256], [256, 2048, 256, 256], [4, 2, 8, 256], [2048, 256, 2048, 256]]);
 
-playGame([[0, 0, 2, 2], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]);
+// playGame([[0, 0, 2, 2], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]);
 
 
 // // Test 1
