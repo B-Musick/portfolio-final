@@ -344,14 +344,7 @@ let playGame=(arr)=>{
 
     let board = new Board(arr);
     board.printBoard();
-    // <div id="game-over-display" class="game-over-form-no-display">
-    //     <h1>GAME OVER!</h1>
-    //     <form action="/projects/2048/"></form> method="POST">
-    //             <p id="game-over-initials">PLAYER INITIALS</p>
-    //     <input id="game-over-input" type="text" name="score[player]">
-    //         <input type="submit">
-    //         </form>
-    //     </div>
+
     document.addEventListener('keydown',move=(e)=>{
         // Shift the board when the matching keycode pressed
         if (!board.gameOver()) {
@@ -380,6 +373,7 @@ let playGame=(arr)=>{
 
 
             board.printBoard();
+            document.removeEventListener('touchstart', move);
             document.removeEventListener('keydown',move);
             console.log('Game Over!');
         }
@@ -417,6 +411,7 @@ let playGame=(arr)=>{
                 
             board.printBoard();
             document.removeEventListener('touchstart', move);
+            document.removeEventListener('keydown', move);
             console.log('Game Over!');
         }
     });
