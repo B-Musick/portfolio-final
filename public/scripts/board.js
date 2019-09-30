@@ -371,7 +371,8 @@ let playGame=(arr)=>{
                     .append('input')
                     .attr('name', 'score[player]')
                     .attr('type', 'text')
-                    .attr('autofocus');;
+                    .node()
+                    .focus();
 
                 d3.select('#game-over-form')
                     .append('input')
@@ -417,7 +418,8 @@ let playGame=(arr)=>{
                     .append('input')
                     .attr('name', 'score[player]')
                     .attr('type', 'text')
-                    .attr('autofocus');
+                    .node()
+                    .focus();
 
                 d3.select('#game-over-form')
                     .append('input')
