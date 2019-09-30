@@ -54,7 +54,8 @@ router.get('/2048',(req,res)=>{
 CSS
 - Put position: relative in a parent element, then if place position: absolute in any child, and use say top, bottom, etc... these will be relative to the parent with positiion: relative
 
-
+SCOREBOARD
+https://stackoverflow.com/questions/13847766/how-to-sort-a-collection-by-date-in-mongodb
 
 PROBLEMS
 - Was having trouble getting the touch screen to work on the phone for 2048. I tried pointer events to no avail. Touch events is what worked 

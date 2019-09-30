@@ -27,49 +27,58 @@
         </svg>
         <div class="score-controls-container">
             
-              <div>
+
+        </div>
+        <div class=controls>
+            <div>
                 <h4>KEYBOARD</h4>
                 <div>i <tab>= UP</div>
                 <div>k = DOWN</div>
                 <div>j <tab>= LEFT</div>
                 <div>l <tab>= RIGHT</div>
-              </div>
-
-                
-                
-                
-
+            </div>
             
-        <div>
-            <h4>PHONE</h4>
-            <p>Tap the middle two squares on the edge of the side of the board you want moved.</p>
-        </div>
+            <div>
+                <h4>PHONE</h4>
+                <p>Tap the middle two squares on the edge of the side of the board you want moved.</p>
+            </div>
+                    <div id="rules">
+                        <h3>HOW IT WORKS</h3>
+                        <p>- MERGE INTEGERS OF THE SAME VALUE BY PRESSING THE DIRECTION WHICH WILL MAKE THIS OCCUR. </p>
+                        <p>- POINTS ACCUMULATE ACCORDING TO THE OUTCOME OF THE MERGERS (VALUE OF THE NEW BLOCK).</p>
+                        <p>- NEW BLOCK WITH 2 OR 4 APPEARS AFTER EACH VALID MOVE.</p>
+                        <p>- ONCE BOARD IS FULL OF VALUES AND NO MORE COMBINATIONS POSSIBLE, GAME IS OVER.</p>
+                    </div>
         </div>
 
 
-        <div id="rules">
-            <h3>HOW IT WORKS</h3>
-            <p>- MERGE INTEGERS OF THE SAME VALUE BY PRESSING THE DIRECTION WHICH WILL MAKE THIS OCCUR. </p>
-            <p>- POINTS ACCUMULATE ACCORDING TO THE OUTCOME OF THE MERGERS (VALUE OF THE NEW BLOCK).</p>
-            <p>- NEW BLOCK WITH 2 OR 4 APPEARS AFTER EACH VALID MOVE.</p>
-            <p>- ONCE BOARD IS FULL OF VALUES AND NO MORE COMBINATIONS POSSIBLE, GAME IS OVER.</p>
-        </div>
+
         
+        <!-- SCOREBOARD -->
         <div class="score-board">
             <table>
                 <tr id="score-board-banner">
+                    <td>RANK</td>
                     <td>PLAYER</td>
                     <td>SCORE</td>
+                    
                 </tr>
+                <% let i = 1 %>
                 <% scores.forEach(score=>{ %>
+                    <% if(i<11){ %>
+                        <tr class="score-board-row">
+                            <td><%=i %></td>
+                            <td><%=score.player%></td>
+                            <td><%=score.score%></td>
+                            <% i++ %>
 
-                    <tr class="score-board-row">
-                        <td><%=score.player%></td>
-                        <td><%=score.score%></td>
+                        </tr>
+                    <% }%>
 
-                    </tr>
 
                 <% }) %>
+
+
             </table>
   
         </div>

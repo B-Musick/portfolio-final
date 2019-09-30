@@ -16,7 +16,7 @@ router.get('/',(req,res)=>{
 
 /******************************** 2048 ************************************ */
 router.get('/2048',(req,res)=>{
-    
+    // Sort the scores then pass them to the page
     Score.find().sort({score: -1}).exec((err, foundScores) => {
         err ? console.log(err) : res.render('projects/2048/index', { scores: foundScores});
     });

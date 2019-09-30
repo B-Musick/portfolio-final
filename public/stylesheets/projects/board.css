@@ -1,4 +1,5 @@
 body{
+    
     font-family: 'Righteous', cursive;
     background-color: rgb(156, 206, 244);
     align-items: center;
@@ -20,12 +21,11 @@ tab{
     align-content: center;
     padding-top: 3vh;
 
-
 }
 .score-controls-container{
-    display: flex;
+    
     /* Reverse elements since want score on top */
-    flex-direction: column-reverse;
+    
 }
 .score-controls-container ul{
     list-style: none;
@@ -81,8 +81,56 @@ ul li{
     color: yellow !important;
     border: 5px solid black;
 }
+@media(min-width:800px){
+    body{
+        display: grid;
+        
+        grid-template-rows: 10% 70% 20%;
+    }
+    #header{
+        grid-row: 1/2
+    }
+    #board-score-container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 10% 40% 10% 40%; 
+        grid-column: 1/2;
+        grid-row: 2/3;
+        
+        
+    }
+    #board-display{
+        grid-column: 1/2;
+        margin: 0 auto;
+        grid-row: 2/3;
 
-@media(max-width:465px){
+        
+    }
+    .controls{
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    .score-controls-container{
+        display: block;
+        grid-column: 1/2;
+        grid-row: 3/4;
+        
+    }
+    .score-board{
+        
+        display: block;
+        margin-top: 80px;
+        margin: 80px auto;
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    #rules{
+        grid-row: 3/4;
+    }
+
+
+}
+@media(max-width:980px){
     #score-banner{
         margin-top: 20px;
     }
@@ -102,7 +150,7 @@ ul li{
 }
 
 table, tr, td{
-    border: 3px solid black;
+    border: 5px solid black;
     border-collapse: collapse;
     padding: 5px;
     text-align: center;
@@ -112,7 +160,7 @@ table, tr, td{
 }
 
 td{
-    width: 80px;
+    width: 100px;
 }
 
 .score-board{

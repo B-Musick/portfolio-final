@@ -415,7 +415,7 @@ let playGame=(arr)=>{
 
                 
             board.printBoard();
-            document.removeEventListener('keydown', move);
+            document.removeEventListener('touchstart', move);
             console.log('Game Over!');
         }
     });
@@ -428,7 +428,7 @@ let playGame=(arr)=>{
 
 playGame([[2, 2, 256, 256], [256, 2048, 256, 256], [4, 2, 8, 256], [2048, 256, 2048, 256]]);
 
-
+// playGame([[0, 0, 2, 2], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]);
 
 
 // // Test 1
