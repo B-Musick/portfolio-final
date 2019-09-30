@@ -350,31 +350,39 @@ let playGame=(arr)=>{
         if (!board.gameOver()) {
             board.shift((String.fromCharCode(e.keyCode)).toLowerCase());
             board.printBoard();  
+            console.log((!document.getElementById('game-over-form')))
         }else{
             let score = d3.select('#score-value').text();
             // If the game is over, print to screen and remove keylistener for keydown
             document.removeEventListener('touchstart', move);
             document.removeEventListener('keydown', move);
-            d3.select('body').append('h1')
-                .attr('id','game-over')
-                .text('GAME OVER!')
-                .style('color', 'black')
-                .style('text-align', 'center')
-                .append('form')
-                .attr('action','/projects/2048/'+score)
-                .attr('method','POST')
-                .attr('id','game-over-form')
-                .append('input')
-                .attr('name','score[player]')
-                .attr('type','text');
+            console.log((!document.getElementById('game-over-form')))
+            if (!document.getElementById('game-over-form')){
+                // So the game over doesnt print twice, make sure its not an element yet
+                d3.select('body').append('h1')
+                    .attr('id', 'game-over')
+                    .text('GAME OVER!')
+                    .style('color', 'black')
+                    .style('text-align', 'center')
+                    .append('form')
+                    .attr('action', '/projects/2048/' + score)
+                    .attr('method', 'POST')
+                    .attr('id', 'game-over-form')
+                    .append('input')
+                    .attr('name', 'score[player]')
+                    .attr('type', 'text');
 
-            d3.select('#game-over-form')
-                .append('input')
-                .attr('type','submit');
+                d3.select('#game-over-form')
+                    .append('input')
+                    .attr('type', 'submit');
+                
+                board.printBoard();
+            }
 
 
 
-            board.printBoard();
+
+            
            
             console.log('Game Over!');
         }
@@ -393,25 +401,30 @@ let playGame=(arr)=>{
             // If the game is over, print to screen and remove keylistener for keydown
             document.removeEventListener('touchstart', move);
             document.removeEventListener('keydown', move);
-            d3.select('body').append('h1')
-                .attr('id', 'game-over')
-                .text('GAME OVER!')
-                .style('color', 'black')
-                .style('text-align', 'center')
-                .append('form')
-                .attr('action', '/projects/2048/' + score)
-                .attr('method', 'POST')
-                .attr('id', 'game-over-form')
-                .append('input')
-                .attr('name', 'score[player]')
-                .attr('type', 'text');
+            console.log((!document.getElementById('game-over-form')))
+            if (!document.getElementById('game-over-form')){
+                // So the game over doesnt print twice, make sure its not an element yet
+                d3.select('body').append('h1')
+                    .attr('id', 'game-over')
+                    .text('GAME OVER!')
+                    .style('color', 'black')
+                    .style('text-align', 'center')
+                    .append('form')
+                    .attr('action', '/projects/2048/' + score)
+                    .attr('method', 'POST')
+                    .attr('id', 'game-over-form')
+                    .append('input')
+                    .attr('name', 'score[player]')
+                    .attr('type', 'text');
 
-            d3.select('#game-over-form')
-                .append('input')
-                .attr('type', 'submit');
+                d3.select('#game-over-form')
+                    .append('input')
+                    .attr('type', 'submit');
 
-                
-            board.printBoard();
+
+                board.printBoard();
+            }
+
 
             console.log('Game Over!');
         }
