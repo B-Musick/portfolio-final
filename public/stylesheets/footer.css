@@ -8,6 +8,8 @@
     padding: 2.3vh;
     position: fixed;
     bottom: 0;
+    height: 75px;
+    
 }
 .footer a{
     margin-top: 24px;
@@ -16,6 +18,7 @@
 }
 /* SOCIAL MEDIA ICONS */
 .social-media-icon-container{
+    margin-top: 10px;
     font-size:7vh !important;
     display: flex;
     justify-content: center;

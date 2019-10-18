@@ -5,7 +5,10 @@ let router = express.Router(),
 var User = require('../models/user');
 
 // ROOT ROUTE
-router.get('/', (req, res) => res.render('landing'));
+router.get('/', (req, res) => {
+    
+    res.render('landing');
+});
 
 /****************************REGISTER ROUTES**********************************/
 // USE HTTP METHODS (GET, POST), which take a relative path on the server and a handler

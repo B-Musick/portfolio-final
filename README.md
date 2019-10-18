@@ -56,6 +56,8 @@ CSS
 
 SCOREBOARD
 https://stackoverflow.com/questions/13847766/how-to-sort-a-collection-by-date-in-mongodb
+https://www.w3schools.com/html/html_tables.asp
+https://stackoverflow.com/questions/49594197/autofocus-attribute-works-once-but-not-twice-on-input-elements
 
 PROBLEMS
 - Was having trouble getting the touch screen to work on the phone for 2048. I tried pointer events to no avail. Touch events is what worked 

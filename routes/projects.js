@@ -48,11 +48,11 @@ router.get('/calculator', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views/projects/calculator/index.html'));
 })
 
-// How to return json
-router.get('/json/:name',(req,res)=>{
-    // Take the route parameter input from client
-    res.json({'name':req.params.name});
-})
+// // How to return json
+// router.get('/json/:name',(req,res)=>{
+//     // Take the route parameter input from client
+//     res.json({'name':req.params.name});
+// })
 
 
 

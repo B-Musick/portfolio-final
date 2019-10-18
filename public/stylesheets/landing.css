@@ -8,7 +8,10 @@ body{
     /* font-family: 'Archivo Black', sans-serif; */
     /* font-family: 'Sigmar One', cursive;
      */
-     font-family: 'Saira Stencil One', cursive;
+     /* font-family: 'Saira Stencil One', cursive;
+      */
+      font-family: 'Inconsolata', monospace;
+      font-weight: 700;
      
     
 
@@ -146,14 +149,15 @@ body{
     height: 100%;
     width: 90%;
     margin: 0 auto;
-    margin-top: 110px;
+    margin-top: 13vh;
     color: white;
     justify-self: center;
     position: relative;
     bottom:0;
     overflow: hidden;
-    padding-left: 10vw;
- 
+    padding-left: 15vw;
+    
+    
      
 }
 .description-container{
@@ -172,9 +176,12 @@ body{
     /* This is the location when the text is shown on the screen */
     position: absolute;
     top: 0px;
-    font-family: 'Archivo Black', sans-serif;
+    /* font-family: 'Archivo Black', sans-serif; */
+    font-family: 'Inconsolata', monospace;
     display: block;
     overflow: scroll;
+    padding-right: 50px;
+    padding-top: 20px;
     
     transition: top;
     transition-duration: 0.5s;
@@ -184,7 +191,7 @@ body{
 
 #brendan-description-container{
     line-height: 1.6;
-    width: 95%; 
+    width: 80%; 
     margin-left: 50px;
     
     height: 73%;
@@ -219,15 +226,16 @@ body{
     margin-top: 10vh;
 }
 #image-column{
-    
+    /* width: 100%; */
+    margin-left: 2vw;
 }
 #image-column img{
-    width: 135px;
-    height: 165px;
+    width: 155px;
+    height: 190px;
     object-fit: cover;
     border-radius: 100%;
     border: 15px solid rgb(37, 25, 46);;
-    margin-top: 30%;
+    margin-top: 40%;
 }
 
 /********************************** TECH PAGE  ****************************** */
@@ -274,10 +282,33 @@ body{
         padding: 0;
     }
 }
-
+#about-description-container a{
+    color: white;
+}
 #projects-description-container{
-    margin-top: 15vh;
+    
+    margin-top: 12vh;
     left: 14vw;
+}
+
+#mission-description-container a{
+    color: white;
+    
+    
+}
+#mission-description-container li{
+    list-style-type: square;
+}
+
+#mission-description-container h4{
+    border-bottom: 1px dashed white;
+    padding-bottom: 5px;
+}
+#technologies-description-container{
+    margin-right: 2vw;
+}
+#learning-description-container a{
+    color: white;
 }
 
 @media(max-width: 1030px){
@@ -329,4 +360,35 @@ body{
 
 }
 
+
+
+.project-header{
+    float: right;
+    
+    width: 75vw;
+    text-align: left;
+    color: white;
+    border-bottom: 2px dashed white;
+    padding-bottom: 20px;
+}
+
+.page-row-1{
+    height: 75vh;
+    margin-bottom: 0;
+      
+}
+
+.page-row-2{
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.page-row-3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
 
