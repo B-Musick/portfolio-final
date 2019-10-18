@@ -391,4 +391,10 @@ body{
     justify-content: space-evenly;
     
 }
+.page-row-4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
 
