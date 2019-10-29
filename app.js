@@ -72,19 +72,19 @@ app.use(function (req, res, next) {
 app.use(methodOverride("_method"));
 
 // CONNECT THE DATABASE RUNNING ON DEFAULT PORT 27017
-// mongoose.connect(process.env.LOCAL_DATABASE, { useNewUrlParser: true }); 
-// mongoose.set( 'useUnifiedTopology', true );
+mongoose.connect(process.env.LOCAL_DATABASE, { useNewUrlParser: true }); 
+mongoose.set( 'useUnifiedTopology', true );
 
 
 // CONNECT TO MONGODB ATLAS DATABASE - pass URI key to connect
-mongoose.connect(process.env.DATABASEURL, {
-    userNewUrlParser: true,
-    useCreateIndex: true
-}).then(() => {
-    console.log("Connected to DB!");
-}).catch(err => {
-    console.log("Error: ", err.message);
-});
+// mongoose.connect(process.env.DATABASEURL, {
+//     userNewUrlParser: true,
+//     useCreateIndex: true
+// }).then(() => {
+//     console.log("Connected to DB!");
+// }).catch(err => {
+//     console.log("Error: ", err.message);
+// });
 
 app.set('view engine', 'ejs'); // Dont have to add .ejs to files
 
@@ -122,7 +122,7 @@ app.use('/projects',projectRoutes); // Import project routes
 // });
 
 // TELL SERVER TO LISTEN ON SPECIFIC PORT FOR HEROKU APP
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${PORT}`);
 });

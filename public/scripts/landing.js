@@ -82,8 +82,8 @@ document.addEventListener('click',e=>{
     // Check that where pressed wasnt a button
     let notAButton = buttonArray.every(button=>button.id!==e.target.id);
     
-    if(notAButton){
-        // If pressed the page, then return to ground zero
+    if(notAButton && e.target.classList[0]!=='footer-item'){
+        // If pressed the page, then return to ground zero. If press footer, do nothing
         buttonArray.forEach(button => button.classList.remove('landing-button-transition'))
         buttonArray.forEach(button=>{button.classList.remove('foldable-retreat')});
 

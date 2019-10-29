@@ -1,67 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black|Sigmar+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap');
+
 /* LANDING PAGE MISSION STATEMENT */
 body{
     margin:0;
     padding:0;
     height: 100vh;
-    /* font-family: 'Archivo Black', sans-serif; */
-    /* font-family: 'Sigmar One', cursive;
-     */
-     /* font-family: 'Saira Stencil One', cursive;
-      */
-      font-family: 'Inconsolata', monospace;
-      font-weight: 700;
-     
-    
-
+    width: 100vw;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
 }
+
 
 .name-mission-statement{
     /* Will take up the whole page besides the header */
     height: 100%;
     width: 100vw;
     display:flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     background-color: rgb(87, 51, 114);
     position: relative;
     overflow: hidden;
 }
 
-/* .mission-statement-headshot{
-    background: url(https://imgur.com/zzbfnJd.jpg) no-repeat linear-gradient(to right, white, transparent 90%);;
-    height: 78vh;
-    width: 30vw;
-    background-size: cover;
-    position: absolute;
-    
-    right:0px;
-    background-image: -webkit-linear-gradient(left, 
-            rgba(87, 51, 114, 1) 3%, 
-            rgba(0,0,0,0) 20%,
-            rgba(0,0,0,0) 80%,
-            rgba(0,0,0,0) 3%
-        ),
-    url(https://imgur.com/zzbfnJd.jpg);
-    transition: background-image;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-}
-
-.mission-statement-headshot-transition{
-    /* Used when a tag is clicked to trasition the image of me out */
-    /* background-image: none;
-    width:0;
-    transition: background-image;
-    transition-duration: 1s;
-    transition-timing-function: linear; 
-} */
-
 /***************************** BUTTON TABS ***********************************/
 .landing-foldable{
     /* Used to set the original button */
     /* line-height: 2.5; */
-    font-size: 2vw;
+    font-size: 2.3vw;
     
     border-radius: 0px 20px 20px 0;
     width: 12vw;
@@ -95,24 +61,23 @@ body{
 #landing-mission{
     margin-top: 38vh;
     background-color:rgb(216, 102, 77);
-
 }
 
 #landing-technologies{
     margin-top: 48vh;
     background-color:rgb(77, 216, 172);
-
 }
+
 #landing-learning{
     margin-top: 58vh;
     background-color:rgb(243, 201, 112);
-
 }
+
 #landing-projects{
     margin-top: 68vh;
     background-color:rgb(209, 136, 233);
-
 }
+
 .landing-button-transition{
     /* transition the button to the top of page  */
     filter: brightness(120%) !important;
@@ -133,48 +98,52 @@ body{
     /* This will retreat the button not clicked into a tab form, it will transition */
     /* background-color:  rgb(37, 25, 46) !important; */
     width: 6vw;
-    font-size: 1vw !important;
+    
+    font-size: 1.4vw !important;
     transition: top, width, height, font-size, margin-top background-color;
     transition-duration: 0.5s;
     transition-timing-function: linear;
 }
 
-
-
-
-
 /******************************* DESCRIPTIONS *********************************/
 .description{
     /* Styles the descriptions */
     height: 100%;
-    width: 90%;
+    width: 90vw;
     margin: 0 auto;
     margin-top: 13vh;
     color: white;
     justify-self: center;
-    position: relative;
+    /* position: relative; */
     bottom:0;
-    overflow: hidden;
-    padding-left: 15vw;
-    
-    
-     
+    overflow: scroll;
+    padding-left: 15vw; 
 }
 .description-container{
     /* This is the position of the container when off screen */
     text-align: center;
     position: absolute;
     top: 1000px;
-
+    
     transition: top;
     transition-duration: 0.5s;
     transition-timing-function: linear;
     
 }
 
+#about-description-container{
+    width: 95%;
+    overflow: scroll;
+}
+#about-description-container a{
+    color: white;
+}
+
 .description-inside-screen{
+    height: 70%;
     /* This is the location when the text is shown on the screen */
-    position: absolute;
+    position: relative;
+    width: 90%;
     top: 0px;
     /* font-family: 'Archivo Black', sans-serif; */
     font-family: 'Inconsolata', monospace;
@@ -182,6 +151,7 @@ body{
     overflow: scroll;
     padding-right: 50px;
     padding-top: 20px;
+    /* padding-bottom: 5vh; */
     
     transition: top;
     transition-duration: 0.5s;
@@ -189,6 +159,11 @@ body{
     
 }
 
+@media(max-height:614px){
+    .description-inside-screen{
+        height: 67vh;
+    }
+}
 #brendan-description-container{
     line-height: 1.6;
     width: 80%; 
@@ -199,27 +174,6 @@ body{
     grid-template-columns: 70% 30%;
     
 }
-
-
-
-/* #brendan-title{
-    text-align: center;
-    width: 100%;
-    height: 15%;
-    display: relative;
-    width: 100%;
-    height: 100px;
-    font-size: 40px !important;
-    margin-top:0 !important;
-    padding-top: 0;
-    line-height: 2.4;
-    color: white;
-    position: absolute;
-    top:0;
-    transition: top;
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
-} */
 
 #description-column{
     padding: 0 40px 0 30px;
@@ -260,8 +214,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
-    
 }
 
 .fab{
@@ -282,13 +234,14 @@ body{
         padding: 0;
     }
 }
-#about-description-container a{
-    color: white;
-}
+
+/****************************** PROJECTS **************************************/
 #projects-description-container{
-    
+    /* Needed position absolute  */
+    position: absolute;
     margin-top: 12vh;
     left: 14vw;
+    height: 78% !important;
 }
 
 #mission-description-container a{
@@ -312,15 +265,10 @@ body{
 }
 
 @media(max-width: 1030px){
-    .description{
-        margin: 0;
-        margin-top: 13vh;
-        padding-right: 50vw;
-        padding-left: 13vw;
-    }
+
     #brendan-description-container{
         width: 90vw !important;
-        
+        height: 69%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -344,14 +292,23 @@ body{
     #brendan-description-container{
         font-size: 11px;
     }
+    #about-description-container{
+    width: 70%;
+    
+    }
+    #mission-description-container{
+    width: 70%;
+
+    }
     .description-inside-screen{
     /* This is the location when the text is shown on the screen */
+    margin-top: 40px;
+    
     position: absolute;
     top: 0px;
-    font-family: 'Archivo Black', sans-serif;
-        display: block;
+    display: block;
     overflow: scroll;
-     font-size: 11px;
+    font-size: 11px;
     transition: top;
     transition-duration: 0.5s;
     transition-timing-function: linear;
@@ -359,8 +316,6 @@ body{
 }
 
 }
-
-
 
 .project-header{
     float: right;
