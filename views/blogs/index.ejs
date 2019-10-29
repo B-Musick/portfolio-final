@@ -10,7 +10,7 @@
                     </div>
                     <div class="column-right">
                         <div class="blog-index-title"><%=blog.title%></div>
-                        <div class="blog-index-text"><%if(blog.text){%><%= blog.text.substring(0,300) %><%}%>...</div>
+                        <div class="blog-index-text"><%if(blog.text){%><%- blog.text.substring(0,300) %><%}%>...</div>
                         <div class="blog-index-date"><%=months[blog.date.getMonth()]%> <%=blog.date.getDate()%>, <%=blog.date.getFullYear()%></div>
                     </div>
 
