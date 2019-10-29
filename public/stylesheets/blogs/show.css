@@ -13,14 +13,18 @@
 }
 .show-page-content{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; 
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+    
     
 }
 
 .blog-image-container{
-    height: 50vh;
-    width: 50vw;
+    height: 300px;
+    width: 350px;
+    margin: 0 auto;
+    
     /* background-image: url("http://i.stack.imgur.com/2OrtT.jpg"); */
     background-size: cover;
     background-repeat: no-repeat;
@@ -43,4 +47,19 @@
 
 .blog-text{
     padding: 30px 80px;
+}
+
+@media(max-width:375px){
+    .show-page-container{
+        height:81vh;
+    }
+    .blog-image-container{
+        width: 100vw;
+    }
+    .blog-text{
+        padding: 30px 30px;
+    }
+    .footer{
+        height: 50px;
+    }
 }
