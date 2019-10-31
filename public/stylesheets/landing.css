@@ -221,6 +221,10 @@ body{
     color: white;
     margin: 0 20px;
 }
+.tech-text-column a{
+    color: white;
+    text-decoration: none;
+}
 
 @media(max-width: 630px){
     .tech-columns-container{
