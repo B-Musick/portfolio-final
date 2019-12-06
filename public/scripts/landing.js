@@ -46,14 +46,16 @@ infoLable.forEach(label => {
 
 /************ THE SCREEN IS CLICKED, RETURN TO NORMAL **********/
 document.addEventListener('click', (e) => {
+    
     let revertPage = true;
     infoLable.forEach(label => {
-        if (label.id === e.target.id) {
+        if (e.target.classList[1] !== 'description-body-shown' ||label.id === e.target.id) {
             revertPage = false;
 
         }
     });
     if (revertPage) {
+        
         labelClicked = false;
         labelThatClick = ""; // This will hold id of the label that was clicked
         infoLable.forEach(thisLabel => {
