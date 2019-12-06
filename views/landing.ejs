@@ -6,62 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/stylesheets/landing.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
-    <link href="https://fonts.googleapis.com/css?family=Mansalva|Turret+Road:700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- PROJECT STYLESHEETS -->
-        <link rel="stylesheet" href="/stylesheets/projects/index.css">
-        
-<!-- FONT AWESOME CDN FOR SOCIAL MEDIA ICONS -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/projects/index.css">
 
-<!-- MFIZZ ICON CDN (MONGODB ICON)-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- MFIZZ ICON CDN (MONGODB ICON)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
     <title>Brendan Musick</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"></script>
+    <!-- FONT AWESOME CDN FOR SOCIAL MEDIA ICONS/ TECH ICONS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- MFIZZ ICON CDN (MONGODB ICON)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
+
+
 </head>
 <body>
-    <main class="name-mission-statement">
-
-        <!-------------------------- BUTTON TABS ---------------------------------------->
-        <div class="landing-foldable landing-button-transition" 
-                id="landing-brendan">BRENDAN MUSICK</div>
-        <div class="landing-foldable" id="landing-about">ABOUT</div>
-        <div class="landing-foldable" id="landing-mission">COURSES</div>
-        <div class="landing-foldable" id="landing-technologies">TECH</div>
-        <div class="landing-foldable" id="landing-learning">LEARNING</div>
-        <a href="/projects"></a><div class="landing-foldable" id="landing-projects">PROJECTS</div></a>
-
-        <!---------------------- FOLDABLE PAGE BODIES ----------------------------->
-
-            
-        <div class="description">
-            
-            <!------------------------- LANDING PAGE ---------------------------->
-
-            <div class="description-inside-screen" id="brendan-description-container">
-
-                <!------------------- DESCRIPTION ---------------------------->
-
-                <div id="description-column">
-                    <p>
-                        As a self taught Full Stack Developer I am
-                        seeking experience in the industry. Attaining a Bachelor Of Science in Biology (University of Manitoba), I subsequently
-                        worked in the conservation sector the past 3 years. 
-                        <br><br>Aside from programming I enjoy reading, golfing, biking and nature. 
-                        <br><br>See tabs to the left for more information on qualifications and current projects.
-                    </p>
-                </div>
-
-                <!----------------------- IMAGE ------------------------------->
-
-                <div id="image-column">
-                    <img src="https://i.imgur.com/KLdsgD0.png" alt="Brendans Image">
-                </div>
+        <div id='landing-page-container'>
+            <div class='hidden-header' id="about-header">ABO<span class="right-header-half">UT</span></div>
+            <div class='hidden-header' id="courses-header">COU<span class="right-header-half">RSES</span></div>
+            <div class='hidden-header' id="tech-header">TEC<span class="right-header-half">HNOLOGY</span></div>
+            <div class='hidden-header' id="learning-header">LEA<span class="right-header-half">RNING</span></div>
+            <div class='hidden-header' id="projects-header">PRO<span class="right-header-half">JECTS</span></div>
+            <div id='top-half-landing'>
+        
+                <!-- NAME LABEL -->
+                <div id="name-label">BRENDAN MUSICK</div>
+                <!-- POSITION LABEL -->
+                <div id="position-label">FULL STACK DEVELOPER</div>
             </div>
-
+            <div id='bottom-half-landing'>
+        
+        
+                <!-- ABOUT LABEL -->
+                <div id="about-rect" class="info-rect"></div>
+                <div id="about-label" class="info-label">ABOUT</div>
+        
+                <!-- COURSES LABEL -->
+                <div id="courses-rect" class="info-rect"></div>
+                <div id="courses-label" class="info-label">COURSES</div>
+        
+                <!-- TECH LABEL -->
+                <div id="tech-rect" class="info-rect"></div>
+                <div id="tech-label" class="info-label">TECHNOLOGY</div>
+        
+                <!-- LEARNING LABEL -->
+                <div id="learning-rect" class="info-rect"></div>
+                <div id="learning-label" class="info-label">LEARNING</div>
+        
+                <!-- PROJECTS LABEL -->
+                <div id="projects-rect" class="info-rect"></div>
+                <div id="projects-label" class="info-label">PROJECTS</div>
+            </div>
+        
+        
+            <!-- DESCRIPTION BODIES -->
+        
             <!------------------------- ABOUT PAGE ------------------------------->
-
-            <div id="about-description-container" class="description-container">
+            <div class='description-body-hidden' id="about-description-container">
+        
+        
+        
                 <p>
                     &nbsp During the winter months of a seasonal position with the
                     Province of Manitoba Conservation (summer 2016/ fall
@@ -103,42 +111,45 @@
                     &nbsp Completed projects can be found in the “ PROJECTS” tab on
                     this site.
                 </p>
-                
-               
-                
+        
+        
+        
+        
             </div>
-
+        
             <!------------------------ COURSES ------------------------------------->
-            <div class="description-container" id="mission-description-container">
+            <div class='description-body-hidden' id="courses-description-container">
+        
+        
                 <ul>
                     <!-- freeCodeCamp -->
                     <h4>freeCodeCamp</h4>
-                    <li><a>Responsive Web Design (Media queries, Flexbox, Grids)</a></li>
-                    <li><a>Front End Web Development (HTML, CSS, Javascript)</a></li>
-                    <li><a>Javascript Data Structures and Algorithms</a></li>
-                    <li><a>Data Visualization (D3)</a></li>
-                    <li><a>API and Microservices (fetch(), JSON, Node, Express, 
-                        MongoDB, Mongoose, Passport)</a></li>
-                    <li><a>Information Security and Quality Assurance</a></li>
-
+                    <li><a href="#">Responsive Web Design (Media queries, Flexbox, Grids)</a></li>
+                    <li><a href="#">Front End Web Development (HTML, CSS, Javascript)</a></li>
+                    <li><a href="#">Javascript Data Structures and Algorithms</a></li>
+                    <li><a href="#">Data Visualization (D3)</a></li>
+                    <li><a href="#">API and Microservices (fetch(), JSON, Node, Express,
+                            MongoDB, Mongoose, Passport)</a></li>
+                    <li><a href="#">Information Security and Quality Assurance</a></li>
+        
                     <!-- University -->
                     <h4>University Of Manitoba</h4>
                     <li>
-                        COMP 1010 and 1020 - Introductory computer science (loops, 
+                        COMP 1010 and 1020 - Introductory computer science (loops,
                         conditionals, data structures, algorithms)
                     </li>
                     <li>
-                        MATH 1500 and 1700- Calculus courses (Limits, Derivatives, 
+                        MATH 1500 and 1700- Calculus courses (Limits, Derivatives,
                         Integrals, Graphing
-                    </li>             
+                    </li>
                     <li>MATH 1300 - Linear Algebra</li>
                     <li>STAT 1000 and 2000 - Statistics</li>
-
+        
                     <!-- Udemy -->
                     <h4>Udemy</h4>
                     <li>
-                        <a href="https://www.udemy.com/certificate/UC-5BLPWT98/">Web 
-                        Developer Bootcamp</a> - HTML, CSS, JS, Node, Express, MongoDB, 
+                        <a href="https://www.udemy.com/certificate/UC-5BLPWT98/">Web
+                            Developer Bootcamp</a> - HTML, CSS, JS, Node, Express, MongoDB,
                         JQuery, Bootstrap
                     </li>
                     <li>Modern React With Redux (75% Complete)</li>
@@ -148,58 +159,56 @@
                     <a href="https://www.udemy.com/certificate/UC-07ID8B2D/">
                         <li>Mike Meyers Comptia A+ 1002 Course</li>
                     </a>
-
+        
                 </ul>
             </div>
-
+        
             <!-------------------------- TECHNOLOGY  ------------------------------->
-            <div class="description-container" id="technologies-description-container">
-                <!--  class="about-description-container" -->
-                
+            <div class="description-body-hidden" id="tech-description-container">
                 <div class="tech-columns-container">
                     <div class="tech-text-column">
-
+        
                         <!--------------- FRONT END ---------------------------->
                         <h2>FRONTEND DEVELOPMENT</h2>
                         <p>
-                            I am comfortable using <u>HTML5</u> and <u>CSS3</u> 
-                            and have dabbled in a few CSS frameworks such as 
-                            Bootstrap and Semantic-UI, but for the most part I 
-                            use vanilla CSS and HTML to style my projects. I am 
-                            confident in my skills using <u>Javascript</u>, knowing 
-                            many of the new features added between ES5 and ES6. I have 
-                            used <u>React</u> to make multiple projects, as well I 
+                            I am comfortable using <u>HTML5</u> and <u>CSS3</u>
+                            and have dabbled in a few CSS frameworks such as
+                            Bootstrap and Semantic-UI, but for the most part I
+                            use vanilla CSS and HTML to style my projects. I am
+                            confident in my skills using <u>Javascript</u>, knowing
+                            many of the new features added between ES5 and ES6. I have
+                            used <u>React</u> to make multiple projects, as well I
                             have used <u>D3</u> for various data visualization projects.
                         </p>
-
+        
                         <!------------------ BACKEND -------------------------->
                         <h2>BACKEND DEVELOPMENT</h2>
                         <p>
-                            The <u>express</u> framework is what I'm accustomed to 
-                            for routing my apps, using <u>passport</u> for authentication. 
-                            I emplore <u>mongoose</u> to model the objects to be 
-                            stored in <u>mongoDB</u> databases, whether it be 
-                            locally or to stored through the web based mongoDB Atlas. 
+                            The <u>express</u> framework is what I'm accustomed to
+                            for routing my apps, using <u>passport</u> for authentication.
+                            I emplore <u>mongoose</u> to model the objects to be
+                            stored in <u>mongoDB</u> databases, whether it be
+                            locally or to stored through the web based mongoDB Atlas.
                             I have recently been delving into SQL and have started
                             implementing it into some RESTful API apps.
                         </p>
-                        
+        
                         <!------------------- OTHER --------------------------->
                         <h2>OTHER TECHNOLOGIES</h2>
                         <p>
-                            <u>Heroku</u> is the main source I use to host the web 
+                            <u>Heroku</u> is the main source I use to host the web
                             apps I have made, and namecheap to purchase my domain names,
-                            I have gone through and know the process of associating 
-                            the two. I use <u>GitHub</u> to save progress of my 
-                            projects, and have learned the process of contributing 
+                            I have gone through and know the process of associating
+                            the two. I use <u>GitHub</u> to save progress of my
+                            projects, and have learned the process of contributing
                             to open source as well.
                         </p>
-                        
+        
                     </div> <!-- TECHNOLOGY -->
-                    
+        
                     <!--------------------- ICONS ----------------------------->
                     <div class="icon-column">
-                        
+        
                         <i class="fab fa-html5"></i>
                         <i class="fab fa-css3-alt"></i>
                         <i class="fab fa-js"></i>
@@ -210,252 +219,273 @@
                         <i class="icon-mongodb fab"></i>
                         <i class="icon-d3 fab"></i>
                         <i class="icon-mysql fab"></i>
-                    
-                    </div> <!-- ICONS -->
+        
+                    </div>
+                    <!--ICONS-->
                 </div>
             </div>
-
+        
             <!--------------------------- LEARNING --------------------------------->
-            <div class="description-container" id="learning-description-container">
-                <!--  class="about-description-container" -->
+        
+            <div class='description-body-hidden' id="learning-description-container">
                 <p>
-                    I am always working on web development projects from freeCodeCamp 
+                    I am always working on web development projects from freeCodeCamp
                     and thinking of my own projects to work on. I have been working
                     with SQL, completing a walkthrough on a site called <a href="https://sqlbolt.com/"><u>SQLBolt</u></a>,
                     creating a test database and am currently working on a
                     full website which will be a site to post book synopsis
-                    and reviews <a style="color:white;" href="https://github.com/B-Musick/book_synopsis_sql">(github link)</a>. I recently started 
-                    <a href="https://www.coursera.org/learn/build-a-computer/home/welcome">nand2tetris</a> 
+                    and reviews <a style="color:white;" href="https://github.com/B-Musick/book_synopsis_sql">(github link)</a>.
+                    I
+                    recently started
+                    <a href="https://www.coursera.org/learn/build-a-computer/home/welcome">nand2tetris</a>
                     to start learning the lower level workings of a computer to compliment my
                     current knowledge of higher level programming.
                 </p>
                 <p>
-                    I plan to get my Comptia A+ certification in November 
-                    (which I have been studying for since the beginning of September). 
+                    I plan to get my Comptia A+ certification in November
+                    (which I have been studying for since the beginning of September).
                     I plan to get my Network+ and Security+ as well in the future.
-                    I am passively doing an ethical hacking course on Udemy as well 
-                    to learn more about networking and security in order to make my 
+                    I am passively doing an ethical hacking course on Udemy as well
+                    to learn more about networking and security in order to make my
                     websites more secure and prevent from attacks.
                 </p>
                 <p>
-                    I am reading and working through <i>The Linux Command Line - William Schotts</i> 
+                    I am reading and working through <i>The Linux Command Line - William Schotts</i>
                     at the moment, trying to learn the ins and outs of the command line.
                 </p>
-                <p> 
-                    I am always eager to learn and am constantly reading new books 
-                    (at least one a week), and currently enjoy reading non-fiction 
-                    books related to computer history, hacking, privacy.  
+                <p>
+                    I am always eager to learn and am constantly reading new books
+                    (at least one a week), and currently enjoy reading non-fiction
+                    books related to computer history, hacking, privacy.
                 </p>
             </div>
-        </div>
+            <div class='description-body-hidden' id="projects-description-container">
         
-        <!----------------------------------- PROJECTS --------------------------------->
-        <div class="description-container" id="projects-description-container">
-            <div class="page-container">
                 <!-------------------------- 1) MAIN PROJECTS ---------------------->
                 <div class="page-row-1">
                     <p class="project-header">MAIN PROJECTS</p>
-
+        
                     <!--------------------------- 2048 ------------------------->
-
+                    <hr>
                     <div class="project">
                         <a href="/projects/2048">
-                        <img class="project-image" src="https://i.imgur.com/tkaCN78.png"></img>
-                        <div class="project-text">
-                            <div class="project-title">2048</div>
-                            <div class="project-description">My own recreation of a game created by Gabriella
-                                Cirulli.</div>
-                            <div class="project-links">
-                                <a href="/projects/2048">
-                                    <div class="anchor-title">PLAY</div>
-                                </a>
-                                <a href="https://github.com/B-Musick/2048-game">
-                                    <div class="project-git-link">GIT REPOSITORY</div>
-                                </a>
+                            <div class="project-image-container">
+                                <img class="project-image" src="https://i.imgur.com/tkaCN78.png"></img>
                             </div>
-                        </div>
+                            <div class="project-text">
+                                <div class="project-title">2048</div>
+                                <div class="project-description">My own recreation of a game created by Gabriella
+                                    Cirulli.</div>
+                                <div class="project-links">
+                                    <a href="/projects/2048">
+                                        <div class="anchor-title">PLAY</div>
+                                    </a>
+                                </div>
+                            </div>
+        
                         </a>
+                        <a class="project-git-link" href="https://github.com/B-Musick/2048-game"><i
+                                class="fab fa-github git-project-icon"></i></a>
                     </div>
-
+        
                     <!--------------------------- ROOTEDINNATURE ---------------------->
-
+                    <hr>
+        
                     <div class="project">
                         <a href="http://www.squarerootedinnature.com/">
-                        <img class="project-image" src="https://i.imgur.com/vxvcOov.png"></img>
-                        <div class="project-text">
-                            <div class="project-title">(RootedInNature)<sup>2</sup></div>
-                            <div class="project-description">
-                                Website for posting plants, nature blogs, and science.
+                            <div class="project-image-container">
+                                <img class="project-image" src="https://i.imgur.com/vxvcOov.png"></img>
                             </div>
-                            <div class="project-links">
-                                <a href="http://www.squarerootedinnature.com/">
-                                    <div class="anchor-title">VISIT</div>
-                                </a>
-                                <a href="#">
-                                    <div href="https://github.com/B-Musick/rooted-in-nature-final" class="project-git-link">GIT
-                                        REPOSITORY
-                                    </div>
-                                </a>
+                            <div class="project-text">
+                                <div class="project-title">(RootedInNature)<sup>2</sup></div>
+                                <div class="project-description">
+                                    Website for posting plants, nature blogs, and science.
+                                </div>
+                                <div class="project-links">
+                                    <a href="http://www.squarerootedinnature.com/">
+                                        <div class="anchor-title">VISIT</div>
+                                    </a>
+                                </div>
+        
                             </div>
-                            
-                        </div>
                         </a>
+                        <a class="project-git-link" href="https://github.com/B-Musick/rooted-in-nature-final"><i
+                                class="fab fa-github git-project-icon"></i></a>
+        
                     </div>
-
+        
                     <!--------------------------- CALCULATOR ---------------------->
-
+                    <hr>
+        
                     <div class="project">
                         <a href="/projects/calculator">
-                        <img class="project-image" src="https://i.imgur.com/mBCNf4W.png"></img>
-                        <div class="project-text">
-                            <div class="project-title">Calculator</div>
-                            <div class="project-description">Fully working calculator with basic operations.</div>
-                            <div class="project-links">
-                                <a href="/projects/calculator">
-                                    <div class="anchor-title">CALCULATE</div>
-                                </a>
-                                <a
-                                    href="https://github.com/B-Musick/FREECODECAMP/tree/master/FRONT_END_LIRARIES/FRONT_END_LIBRARY_PROJECTS/CALCULATOR/calculator_vanilla">
-                                    <div class="project-git-link">GIT REPOSITORY</div>
-                                </a>
+                            <div class="project-image-container">
+                                <img class="project-image" src="https://i.imgur.com/mBCNf4W.png"></img>
                             </div>
+                            <div class="project-text">
+                                <div class="project-title">Calculator</div>
+                                <div class="project-description">Fully working calculator with basic operations.</div>
+                                <div class="project-links">
+                                    <a href="/projects/calculator">
+                                        <div class="anchor-title">CALCULATE</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="project-git-link"
+                            href="https://github.com/B-Musick/FREECODECAMP/tree/master/FRONT_END_LIRARIES/FRONT_END_LIBRARY_PROJECTS/CALCULATOR/calculator_vanilla"><i
+                                class="fab fa-github git-project-icon"></i></a>
+                    </div>
+        
+                    <!------------------------ 2) REACT PROJECTS ---------------------->
+                    <hr>
+        
+                    <div class="page-row-2">
+                        <h3 class="project-header" id="react-project-header">REACT PROJECTS</h3>
+        
+                        <!--------------------- POMODORO CLOCK ---------------------->
+                        <hr>
+        
+                        <div class="project">
+                            <a href="https://fast-spire-51085.herokuapp.com/">
+                                <div class="project-image-container">
+                                    <img class="project-image" src="https://i.imgur.com/RCqZpbb.png"></img>
+                                </div>
+                                <div class="project-text">
+                                    <div class="project-title">Pomodoro Clock</div>
+                                    <div class="project-description">
+                                        Pomodoro clock to keep goals on time. Built using React.
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://fast-spire-51085.herokuapp.com/">
+                                            <div class="anchor-title">TRY</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="project-git-link" href="https://github.com/B-Musick/pomodoro-clock-react"><i
+                                    class="fab fa-github git-project-icon"></i></a>
                         </div>
-                        </a>
+        
+                        <!---------------------- TIC TAC TOE ---------------------->
+                        <hr>
+        
+                        <div class="project">
+                            <a href="https://safe-journey-31520.herokuapp.com/">
+                                <div class="project-image-container">
+                                    <img class="project-image" src="https://i.imgur.com/PqH8OZv.png"></img>
+                                </div>
+                                <div class="project-text">
+                                    <div class="project-title">TIC TAC TOE</div>
+                                    <div class="project-description">
+                                        Classic Tic Tac Toe. Can play against computer or play
+                                        with a friend/enemy.
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://safe-journey-31520.herokuapp.com/">
+                                            <div class="anchor-title">PLAY</div>
+                                        </a>
+        
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="project-git-link" href="https://github.com/B-Musick/tic_tac_toe_react"><i
+                                    class="fab fa-github git-project-icon"></i></a>
+                        </div>
+        
+                        <!---------------------- TONE GENERATOR ---------------------->
+                        <hr>
+        
+                        <div class="project">
+                            <a href="https://guarded-ravine-00658.herokuapp.com/">
+                                <div class="project-image-container">
+                                    <img class="project-image" src="https://i.imgur.com/AgnJq0O.png"></img>
+                                </div>
+                                <div class="project-text">
+                                    <div class="project-title">TONE GENERATOR</div>
+                                    <div class="project-description">
+                                        Choose from 9 different sounds. Use keyboard or click buttons.
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://guarded-ravine-00658.herokuapp.com/">
+                                            <div class="anchor-title">JAM OUT</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="project-git-link" href="https://github.com/B-Musick/drum-machine-react"><i
+                                    class="fab fa-github git-project-icon"></i></a>
+                        </div>
                     </div>
-
-                <!------------------------ 2) REACT PROJECTS ---------------------->
-                
-                <div class="page-row-2">
-                    <h3 class="project-header" id="react-project-header">REACT PROJECTS</h3>
-
-                    <!--------------------- POMODORO CLOCK ---------------------->
-
-                    <div class="project">
-                        <a href="https://fast-spire-51085.herokuapp.com/">
-                            <img class="project-image" src="https://i.imgur.com/RCqZpbb.png"></img>
-                            <div class="project-text">
-                                <div class="project-title">Pomodoro Clock</div>
-                                <div class="project-description">
-                                    Pomodoro clock to keep goals on time. Built using React.
+        
+                    <!------------------------- 3) API PROJECTS ---------------------->
+                    <hr>
+        
+                    <div class="page-row-3">
+                        <h3 class="project-header" id="api-project-header">API PROJECTS</h3>
+        
+                        <!---------------------- WIKI SEARCH ---------------------->
+                        <hr>
+        
+                        <div class="project">
+                            <a href="https://codepen.io/B-Musick/pen/KKKPqeO">
+                                <div class="project-image-container">
+                                    <img class="project-image" src="https://i.imgur.com/MTN6JRT.png"></img>
                                 </div>
-                                <div class="project-links">
-                                    <a href="https://fast-spire-51085.herokuapp.com/">
-                                        <div class="anchor-title">START TIMING</div>
-                                    </a>
-                                    <a
-                                        href="https://github.com/B-Musick/pomodoro-clock-react">
-                                        <div class="project-git-link">GIT REPOSITORY</div>
-                                    </a>
+                                <div class="project-text">
+                                    <div class="project-title">WIKI SEARCH</div>
+                                    <div class="project-description">
+                                        Search keyword and get 10 matches, or choose
+                                        random. Uses Wikipedia API.
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://codepen.io/B-Musick/pen/KKKPqeO">
+                                            <div class="anchor-title">SEARCH</div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                            <a class="project-git-link"
+                                href="https://github.com/B-Musick/FREECODECAMP/tree/master/INTERVIEW_PREP/TAKE_HOME_PROJECTS/WIKIPEDIA_VIEWER"><i
+                                    class="fab fa-github git-project-icon"></i></a>
+                        </div>
+        
+                        <!-------------------------- WEATHER APP ---------------------->
+                        <hr>
+        
+                        <div class="project">
+                            <a href="https://codepen.io/B-Musick/full/VwZoRPM">
+                                <div class="project-image-container">
+                                    <img class="project-image" src="https://i.imgur.com/sxbsTUU.png"></img>
+        
+                                </div>
+                                <div class="project-text">
+                                    <div class="project-title">CURRENT WEATHER</div>
+                                    <div class="project-description">Get the current weather at your location. Uses glitch
+                                        Weather
+                                        API</div>
+                                    <div class="project-links">
+                                        <a href="https://codepen.io/B-Musick/full/VwZoRPM">
+                                            <div class="anchor-title">GO</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="project-git-link" href="https://github.com/B-Musick/weather_api"><i
+                                    class="fab fa-github git-project-icon"></i></a>
+                        </div>
                     </div>
-
-                    <!---------------------- TIC TAC TOE ---------------------->
-
-                    <div class="project">
-                        <a href="https://safe-journey-31520.herokuapp.com/">
-                            <img class="project-image" src="https://i.imgur.com/PqH8OZv.png"></img>
-                            <div class="project-text">
-                                <div class="project-title">TIC TAC TOE</div>
-                                <div class="project-description">
-                                    Classic Tic Tac Toe. Can play against computer or play
-                                    with a friend/enemy.
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://safe-journey-31520.herokuapp.com/">
-                                        <div class="anchor-title">TIC TO THE TAC</div>
-                                    </a>
-                                    <a
-                                        href="https://github.com/B-Musick/tic_tac_toe_react">
-                                        <div class="project-git-link">GIT REPOSITORY</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </a>                  
-                    </div>
-
-                    <!---------------------- TONE GENERATOR ---------------------->
-
-                    <div class="project">
-                        <a href="https://guarded-ravine-00658.herokuapp.com/">
-                            <img class="project-image" src="https://i.imgur.com/AgnJq0O.png"></img>
-                            <div class="project-text">
-                                <div class="project-title">TONE GENERATOR</div>
-                                <div class="project-description">
-                                    Choose from 9 different sounds. Use keyboard or click buttons.
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://guarded-ravine-00658.herokuapp.com/">
-                                        <div class="anchor-title">JAM OUT</div>
-                                    </a>
-                                    <a href="https://github.com/B-Musick/drum-machine-react">
-                                        <div class="project-git-link">GIT REPOSITORY</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </a>                   
-                    </div>
-                </div>
-            
-                <!------------------------- 3) API PROJECTS ---------------------->
-
-                <div class="page-row-3">
-                    <h3 class="project-header" id="api-project-header">API PROJECTS</h3>
-
-                    <!---------------------- WIKI SEARCH ---------------------->
-
-                    <div class="project">
-                        <a href="https://codepen.io/B-Musick/pen/KKKPqeO">
-                            <img class="project-image" src="https://i.imgur.com/MTN6JRT.png"></img>
-                            <div class="project-text">
-                                <div class="project-title">WIKI SEARCH</div>
-                                <div class="project-description">
-                                    Search keyword and get 10 matches, or choose 
-                                    random. Uses Wikipedia API.
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://codepen.io/B-Musick/pen/KKKPqeO">
-                                        <div class="anchor-title">SEARCH</div>
-                                    </a>
-                                    <a
-                                        href="https://github.com/B-Musick/FREECODECAMP/tree/master/INTERVIEW_PREP/TAKE_HOME_PROJECTS/WIKIPEDIA_VIEWER">
-                                        <div class="project-git-link">GIT REPOSITORY</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-------------------------- WEATHER APP ---------------------->
-
-                    <div class="project">
-                        <a href="https://codepen.io/B-Musick/full/VwZoRPM">
-                            <img class="project-image" src="https://i.imgur.com/sxbsTUU.png"></img>
-                            <div class="project-text">
-                                <div class="project-title">CURRENT WEATHER</div>
-                                <div class="project-description">Get the current weather at your location. Uses glitch Weather API</div>
-                                <div class="project-links">
-                                    <a href="https://codepen.io/B-Musick/full/VwZoRPM">
-                                        <div class="anchor-title">GET WEATHER</div>
-                                    </a>
-                                    <a
-                                        href="https://github.com/B-Musick/weather_api">
-                                        <div class="project-git-link">GIT REPOSITORY</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-------------------------- 4) D3 PROJECTS ---------------------->
-
+        
+                    <!-------------------------- 4) D3 PROJECTS ---------------------->
+                    <hr>
+        
                     <div class="page-row-4">
                         <p class="project-header">D3 PROJECTS</p>
                         <div class="project">
                             <a href="https://limitless-spire-20508.herokuapp.com">
-                                <img class="project-image" src="https://i.imgur.com/q4wabRX.png"></img>
+                                <div class="project-image-container">
+                                    <img class="project-image" src="https://i.imgur.com/q4wabRX.png"></img>
+                                </div>
                                 <div class="project-text">
                                     <div class="project-title">BAR GRAPH DEVELOPER</div>
                                     <div class="project-description">Allows user to input local csv file and display
@@ -463,21 +493,27 @@
                                     </div>
                                     <div class="project-links">
                                         <a href="https://limitless-spire-20508.herokuapp.com">
-                                            <div class="anchor-title">START GRAPHING</div>
-                                        </a>
-                                        <a href="https://github.com/B-Musick/bar_chart_file_input">
-                                            <div class="project-git-link">GIT REPOSITORY</div>
+                                            <div class="anchor-title">GRAPH</div>
                                         </a>
                                     </div>
                                 </div>
                             </a>
+                            <a class="project-git-link" href="https://github.com/B-Musick/bar_chart_file_input><i
+                                        class=" fab fa-github git-project-icon"></i></a>
                         </div>
-                    </div>         
-                </div>          
+                    </div>
+                </div>
             </div>
+
         </div>
-    </main>
+        
+    </div>
+        
 <% include ./partials/footer %>
+        
+        
+        
+
 
     
 

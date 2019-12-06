@@ -1,6 +1,6 @@
 
 .blogs-page-container{
-    background-color:rgb(87, 51, 114);
+    background-color: (213, 212, 212);
     padding: 30px;
     padding-top: 0px;
     height: 79vh;
@@ -17,7 +17,7 @@
 
 .blog-container{
     /* Individual blog containers */
-    background-color: rgb(37, 25, 46);
+    background-color: rgb(72, 72, 72);
     margin-top: 40px;
     margin-left: 50px;
     margin-right: 50px;

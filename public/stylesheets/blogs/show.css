@@ -1,5 +1,5 @@
 .show-page-container{
-    background-color:#573372;
+    background-color:rgb(213,212,212);
     height: 79vh;
     overflow: scroll;
     font-family: 'Cairo', sans-serif;
@@ -39,9 +39,9 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    -webkit-box-shadow: 11px -7px 30px -6px rgba(87,51,114,1);
-    -moz-box-shadow: 11px -7px 30px -6px rgba(87,51,114,1);
-    box-shadow: 11px -7px 30px -6px rgba(87,51,114,1);
+    -webkit-box-shadow: 11px -7px 30px -6px rgba(151, 162, 172,1);
+    -moz-box-shadow: 11px -7px 30px -6px rgba(151, 162, 172,1);
+    box-shadow: 11px -7px 30px -6px rgba(151, 162, 172,1);
     
 }
 
