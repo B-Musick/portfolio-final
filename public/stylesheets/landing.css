@@ -328,7 +328,7 @@ body{
 
 /***************** PHONE SCREEN *******************/
 
-@media(max-width:320px){
+@media(max-width:480px){
     .info-label{
         color: rgb(72, 72, 66);;
         position: absolute;
