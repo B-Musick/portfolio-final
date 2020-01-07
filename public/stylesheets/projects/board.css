@@ -1,7 +1,6 @@
 body{
-    
     font-family: 'Righteous', cursive;
-    background-color: rgb(156, 206, 244);
+    background-color: rgb(21, 171, 225);
     align-items: center;
 }
 tab{
@@ -174,4 +173,16 @@ td{
 
 .score-board-row{
     background-color: rgb(255, 77, 0);
+    
 }
+            /* '2': '#9cf0d4',
+            '4': '#78f0c8',
+            '8': '#47e6b1',
+            '16': '#09e3e3',
+            '32': '#09b7e3',
+            '64': '#d967eb',
+            '128': '#c421de',
+            '256': '#e35bb1',
+            '512': '#db2799',
+            '1024': '#db2760',
+            '2048': '#db272d', */

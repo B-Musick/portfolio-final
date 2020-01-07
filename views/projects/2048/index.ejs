@@ -18,17 +18,8 @@
     <div id="header">
         <h1>2048</h1>
     </div>
-
     <div id="board-score-container">
-
-        <svg id="board-display" width="300" height="300">
-
-
-        </svg>
-        <div class="score-controls-container">
-            
-
-        </div>
+        <svg id="board-display" width="300" height="300"></svg>
         <div class=controls>
             <div>
                 <h4>KEYBOARD</h4>
@@ -37,23 +28,18 @@
                 <div>j <tab>= LEFT</div>
                 <div>l <tab>= RIGHT</div>
             </div>
-            
             <div>
                 <h4>PHONE</h4>
                 <p>Tap the middle two squares on the edge of the side of the board you want moved.</p>
             </div>
-                    <div id="rules">
-                        <h3>HOW IT WORKS</h3>
-                        <p>- MERGE INTEGERS OF THE SAME VALUE BY PRESSING THE DIRECTION WHICH WILL MAKE THIS OCCUR. </p>
-                        <p>- POINTS ACCUMULATE ACCORDING TO THE OUTCOME OF THE MERGERS (VALUE OF THE NEW BLOCK).</p>
-                        <p>- NEW BLOCK WITH 2 OR 4 APPEARS AFTER EACH VALID MOVE.</p>
-                        <p>- ONCE BOARD IS FULL OF VALUES AND NO MORE COMBINATIONS POSSIBLE, GAME IS OVER.</p>
-                    </div>
+            <div id="rules">
+                <h3>HOW IT WORKS</h3>
+                <p>- MERGE INTEGERS OF THE SAME VALUE BY PRESSING THE DIRECTION WHICH WILL MAKE THIS OCCUR. </p>
+                <p>- POINTS ACCUMULATE ACCORDING TO THE OUTCOME OF THE MERGERS (VALUE OF THE NEW BLOCK).</p>
+                <p>- NEW BLOCK WITH 2 OR 4 APPEARS AFTER EACH VALID MOVE.</p>
+                <p>- ONCE BOARD IS FULL OF VALUES AND NO MORE COMBINATIONS POSSIBLE, GAME IS OVER.</p>
+            </div>
         </div>
-
-
-
-        
         <!-- SCOREBOARD -->
         <div class="score-board">
             <table>
@@ -74,24 +60,10 @@
 
                         </tr>
                     <% }%>
-
-
                 <% }) %>
-
-
             </table>
-  
         </div>
-
     </div>
-
-
-
-
-    <script src='/scripts/board.js'>
-    
-    </script>
-
+    <script src='/scripts/board.js'></script>
 </body>
-
 </html>

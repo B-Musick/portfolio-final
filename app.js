@@ -115,11 +115,6 @@ app.use('/projects',projectRoutes); // Import project routes
 - HANDLER is a function handling express calls when route is matched. (req,res)
 */
 
-// TELL SERVER TO LISTEN ON SPECIFIC PORT
-// app.listen(3000,()=>{
-//     // Start application
-//     console.log('Server Ready')
-// });
 
 // TELL SERVER TO LISTEN ON SPECIFIC PORT FOR HEROKU APP
 const PORT = process.env.PORT || 3000;

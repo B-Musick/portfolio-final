@@ -28,9 +28,9 @@ class Board {
 
         // Use to set block color in setTile() based on block value
         this.color = {
-            '2': '#9cf0d4',
-            '4': '#78f0c8',
-            '8': '#47e6b1',
+            '2': '#90ef93',
+            '4': '#0ce161',
+            '8': '#97e647',
             '16': '#09e3e3',
             '32': '#09b7e3',
             '64': '#d967eb',
@@ -154,7 +154,7 @@ class Board {
             .attr('x', blockWidth * j)
             .attr('y', blockWidth * i)
             // If zero then red tile, else set to color object value
-            .style('fill', zero ? '#d98b8b':this.color[value]) 
+            .style('fill', zero ? '#e34848':this.color[value]) 
             .style('stroke', 'black')
             .style('stroke-width', 5)
             .attr('class',id)

@@ -59,8 +59,6 @@ body{
     
     z-index: 1;
     transition: left 1s;
-    
-
 }
 
 .right-header-half{
@@ -326,4 +324,90 @@ body{
 .project a {
     width: 100%; 
     height: 100%;
+}
+
+/***************** PHONE SCREEN *******************/
+
+@media(max-width:320px){
+    .info-label{
+        color: rgb(72, 72, 66);;
+        position: absolute;
+        font-size: 12px;
+    }
+
+    #about-rect{
+        width: 10%;
+        top: 10%;
+        right: 0px;
+        transition: width 1s;
+    }
+    #about-label{
+        top: 8%;
+        right: 11%;
+        transition: right 1s, font-size 1s;
+
+    }
+    #courses-rect{
+        width: 12%;
+        top: 18%;
+        right: 0px;
+        transition: width 1s;
+    }
+    #courses-label{
+        top: 16%;
+        right: 13%;
+        transition: right 1s,font-size 1s;
+
+    }
+    #tech-rect{
+        width: 14%;
+        top: 26%;
+        right: 0px;
+        transition: width 1s;
+    }
+    #tech-label{
+        top: 24%;
+        right: 15%;
+        transition: right 1s,font-size 1s;
+
+    }
+    #learning-rect{
+        width: 22%;
+        top: 34%;
+        right: 0px;
+        transition: width 1s;
+    }
+    #learning-label{
+        top:32%;
+        right: 23%;
+        transition: right 1s,font-size 1s;
+
+    }
+    #projects-rect{
+        width: 24%;
+        top: 42%;
+        right: 0px;
+        transition: width 1s;
+    }
+    #projects-label{
+        top: 40%;
+        right: 25%;
+        transition: right 1s,font-size 1s;
+    }
+
+
+    /***** Footer Social Media Icons *****/
+    #footer{
+        font-size: 1.5vh;
+    }
+    .social-media-icon-container{
+        font-size: 3vh !important;
+    }
+    .footer-item{
+        text-decoration: none;
+        color:rgb(72, 72, 66);
+        padding: 10px;
+        /* font-size: 15px; */
+    
+}
 }
