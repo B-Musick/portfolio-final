@@ -229,7 +229,7 @@ body{
     position: absolute;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 10%;
+    padding-top: 5%;
     left: -200%;
     width: 80%;
     transition: left 1s linear;
@@ -247,6 +247,8 @@ body{
     transition: left 1s linear 2.5s;
     height: 100%;
     font-size: 13px;
+    overflow: scroll;
+    margin-top: 65px;
     
 
 }
