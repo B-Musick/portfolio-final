@@ -47,8 +47,7 @@ router.get('/:id', (req,res)=>{
     Blog.findById(req.params.id, (err, showBlog) => {
         // Passes in 
         err ? console.log(err) : res.render('blogs/show', { blog: showBlog });
-    })
-
+    });
 });
 
 // EDIT ROUTE --> /blogs/:id/edit
@@ -75,6 +74,5 @@ router.delete('/:id', middleware.isLoggedIn, (req, res) => {
         err ? res.redirect('/blogs') : res.redirect('/blogs');
     });
 });
-
 
 module.exports = router;

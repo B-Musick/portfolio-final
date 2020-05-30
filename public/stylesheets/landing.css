@@ -136,8 +136,6 @@ body{
     left: -200px;
     /* Delay transition 2s */
     transition: left 1s linear 0.1s;
-    
-    
 }
 .label-header{
     color: white;
@@ -224,7 +222,7 @@ body{
     right: 25%;
     transition: right 1s,font-size 1s;
 }
-
+/************************* DIFFERENT TOPIC CONTAINERS *************************/
 .description-body-hidden{
     position: absolute;
     padding-left: 5%;
@@ -275,10 +273,7 @@ body{
     color: rgb(72, 72, 66);
     
 }
-#footer-links{
-    
-    
-}
+
 .footer-item{
     text-decoration: none;
     color:rgb(72, 72, 66);
