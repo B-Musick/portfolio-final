@@ -10,6 +10,7 @@
 .blog-container-anchor{
     text-decoration: none;
     color: white;
+    display: flex;
     
 
 }
