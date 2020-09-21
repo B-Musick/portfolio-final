@@ -30,6 +30,7 @@ app.use(helmet({
 
 }));
 
+app.set('view engine', 'ejs');
 // This is needed for the PUT request of update
 let methodOverride = require('method-override');
 
@@ -86,7 +87,7 @@ mongoose.connect(process.env.DATABASEURL, {
     console.log("Error: ", err.message);
 });
 
-app.set('view engine', 'ejs'); // Dont have to add .ejs to files
+// app.set('view engine', 'ejs'); // Dont have to add .ejs to files
 
 // Another type of encoding is multipart/form-data used to upload binary files
 // We will use urlencoded
