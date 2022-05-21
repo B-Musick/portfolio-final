@@ -265,3 +265,51 @@ clickLabel = (e, label, infoLable) => {
         }
     });
 };
+
+/************************** COURSE PAGE LOGIC **********************************/
+
+/**** UNIVERSITY OF MANITOBA COURSE TABLE *******/
+let courseList = [
+    { 'name': "COMP 1010 - Introductory Computer Science 1", 'desc': "Intro course using Processing a Java based program" },
+    { 'name': "COMP 1020 - Introductory Computer Science 2", 'desc': "Java language is used to learn various programming methods such as Object Oriented Programming and recursion and using basic algorithms such as linear and binary search." },
+    { 'name': "COMP 2140 - Data Structures and Algorithms", 'desc': "Using java, this course focused on implementing many different data structures and algorithms." },
+    { 'name': "COMP 2150 - Object Orientation", 'desc': "Course focusing on Object Oriented Programming and how to structure programs using parent and child classes, using Java, Javascript and C++ languages." },
+    { 'name': "COMP 2160 - Programming Practices", 'desc': "Using C, I developed a knowledge of how programs are compiled, implemented programs with header files and ran them with makefiles, leart dynamic programming and how memory is allocated on the fly (such as using malloc)." },
+    { 'name': "COMP 2080 - Analysis Of Algorithms", 'desc': "" },
+    { 'name': "COMP 2280 - Introduction to Computer Systems", 'desc': "" },
+    { 'name': "COMP 3370 - Computer Organization", 'desc': "Studied the various main aspects of a computer including the CPU, Memory, Parallel Computation" },
+    { 'name': "COMP 3380 - Database: Concepts and Usage", 'desc': "" },
+    { 'name': "COMP 4380 - Database Implementation", 'desc': "" },
+    { 'name': "COMP 3030 - Automata Theory and Formal Languages", 'desc': "Studied various proofs determining if a computational problem can be solved." },
+    { 'name': "MATH 1240", 'desc': "" },
+    { 'name': "COMP 3490 - Computer Graphics 1", 'desc': "Used OpenGL along with Processing to learn about the process through which graphics are created, how matrices are used in this process, using the modelling heirarchy to create motion graphics." },
+    { 'name': "COMP 4490 - Computer Graphics 2", 'desc': "" },
+    { 'name': "COMP 3190 - Intro to Artificial Intelligence", 'desc': "" },
+    { 'name': "COMP 3430 - Operating Systems", 'desc': "" },
+    { 'name': "COMP 4620 - Professional Practice in Computer Science", 'desc': "" },
+    { 'name': "COMP 3350 - Software Engineering 1", 'desc': "" }
+
+]
+let uofmCourseTable = document.getElementById("university-course-table");
+
+// Loop through course list and add new row with course name and description
+courseList.forEach((course, idx) => {
+
+    let row = document.createElement("tr"); // New row 
+
+    // Create new name column and add the associated name
+    let courseName = document.createElement("td");
+    courseName.classList.add("course-name");
+    courseName.textContent = course["name"];
+
+    // Create new description column and add the associated desc
+    let courseDesc = document.createElement("td");
+    courseDesc.classList.add("course-desc")
+    courseDesc.textContent = course["desc"];
+
+    // Append the name and desc to the row
+    row.appendChild(courseName);
+    row.appendChild(courseDesc);
+
+    uofmCourseTable.appendChild(row); // Append the row to the table
+})

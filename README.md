@@ -64,3 +64,24 @@ PROBLEMS
 https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events
 
 .env - doesnt work on heroku, just add the config variable directly online
+
+### January 12, 2022 Updates
+- Have to login using 'heroku login' 
+https://devcenter.heroku.com/articles/authentication#retrieving-the-api-token
+
+# How to upload edits
+1) git add 
+2) git commit -m 'message'
+3) git push
+4) git push heroku master
+
+# Check remotes for heroku and git
+git remote -v
+
+# Deploying with git 
+https://devcenter.heroku.com/articles/git
+
+# To do
+- Upgrade stack
+https://devcenter.heroku.com/articles/upgrading-to-the-latest-stack
+

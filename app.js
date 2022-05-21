@@ -73,7 +73,7 @@ app.use(function (req, res, next) {
 app.use(methodOverride("_method"));
 
 // CONNECT THE DATABASE RUNNING ON DEFAULT PORT 27017
-// mongoose.connect(process.env.LOCAL_DATABASE, { useNewUrlParser: true }); 
+// mongoose.connect(process.env.LOCAL_DATABASE, { useNewUrlParser: true, useUnifiedTopology: true }); 
 // mongoose.set( 'useUnifiedTopology', true );
 
 
