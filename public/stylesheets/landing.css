@@ -56,7 +56,7 @@ body{
 .name-label-hidden{
     /* Hide name label when click on one of the tabs */
     left: -300% !important;
-    
+    display:none; /* Hide 'Brendan Musick' when folded */
     z-index: 1;
     transition: left 1s;
 }
@@ -137,6 +137,7 @@ body{
     /* Delay transition 2s */
     transition: left 1s linear 0.1s;
 }
+
 .label-header{
     color: white;
     position: absolute;
@@ -145,8 +146,6 @@ body{
     top: 20px;
     transition: left 1s;
     z-index: 1;
-    
-
 }
  /* Change the page background */
 

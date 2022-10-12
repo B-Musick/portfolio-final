@@ -7,6 +7,7 @@ let rectWidth = {
     'learning': 22,
     'projects': 24
 };
+
 // Used to reset labels back to original position (%)
 let labelLocation = {
     'about-label': 11,
