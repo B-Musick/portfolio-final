@@ -505,30 +505,39 @@ td {
     font-weight: 200;
 }
 
-/* PROJECTS PAGE */
+/******************************* PROJECTS PAGE *******************************/
 #projects-description-container {
-    width: 550px;
+    /* Container for the list of projects */
+    width: 70%;
     margin-left: 10%;
     overflow: scroll;
     padding-bottom: 50px;
 }
 
 .project {
-    width: 500px;
+    /* Individual project container */
+    width: 100%;
     height: fit-content;
-    display: grid;
-    grid-template-columns: 150px 300px 100px;
+    display: flex;
+    flex-direction: column; /* Want the info to be in vertical stack*/
+    /* grid-template-columns: 150px 300px 100px; */
 }
 
 .project-image {
-    width: 130px;
-    height: 100px;
+    height: 30%;
+    width: 70%;
+    padding: 10px;
+    border-radius: 50px;
 }
 
 .project-image-container {
-    width: 100%;
-    height: 100%;
-    grid: 1/2;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.project-git-link{
+
 }
 
 .project a {
@@ -543,21 +552,37 @@ td {
 }
 
 .project-text {
-
+    /* Text description of the project */
     color: rgb(72, 72, 66);
-    grid: 2/3;
-    width: 300px;
+    padding: 10px;
+    text-align: center;
 }
 
 .project-title {
     font-weight: 700;
-    font-size: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.project-links{
+    /* Hold the view project and github links */
+    display: flex;
+    /* Want the content spaced evenly apart, more so in the center of the project box */
+    justify-content: space-evenly; 
+    width: 50%;
+    align-self: center;
+    padding: 1.5em;
+}
+
+.project-links i{
+    /* Change the size of the icon */
+    font-size: 2.5em;
 }
 
 .project-git-link {
-    grid: 3/4;
     height: 100%;
     width: 50px;
+    padding: 10px;
 
 }
 
@@ -569,12 +594,13 @@ td {
 }
 
 .anchor-title {
+    border-radius: 25px;
     padding: 5px;
     background-color: rgb(72, 72, 66);
     width: 70px;
     color: white;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 0.2em;
 }
 
 @media(max-width:480px) {
