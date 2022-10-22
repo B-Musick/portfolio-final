@@ -317,10 +317,10 @@ body{
 
 }
 
-.project a {
+/* .project a {
     width: 100%; 
     height: 100%;
-}
+} */
 
 .tech-columns-container{
     overflow: scroll;

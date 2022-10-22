@@ -313,4 +313,39 @@ courseList.forEach((course, idx) => {
     row.appendChild(courseDesc);
 
     uofmCourseTable.appendChild(row); // Append the row to the table
-})
+});
+
+
+/***************************************************************************
+ * Project Image Slideshow Logic
+ * Source - https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp 
+ *      Section 3 - Javascript logic
+ ***************************************************************************/
+let slideIndex = 0;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    // Get a list of all the slideshow images
+    let slides = document.getElementsByClassName("slideshow-image");
+
+
+    // let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n >= slides.length-1) { slideIndex = 0 }
+    if (n < 0) { slideIndex = slides.length-2 }
+    
+    for (let imgCount = 0; imgCount < slides.length; imgCount++) {
+        if (imgCount != slideIndex) {
+            slides[imgCount].style.display = "none";
+
+        }
+    }
+
+    slides[slideIndex].style.display = "block";
+    // captionText.innerHTML = dots[slideIndex - 1].alt;
+}

@@ -348,11 +348,6 @@ body {
 
 }
 
-.project a {
-    width: 100%;
-    height: 100%;
-}
-
 /****************** TECHNOLOGY ********************/
 .tech-text-column p {
     font-size: medium;
@@ -525,22 +520,91 @@ td {
 
 .project-image {
     height: 30%;
-    width: 70%;
-    padding: 10px;
-    border-radius: 50px;
+    width: 100%;
+    /* border-radius: 50px; */
 }
 
 .project-image-container {
     border-radius: 50px;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    /* Position to place the gallery arrows*/
+    position: relative;
+    width: 100%;
+    /* width:max-content; */
+}
+
+/****************************************************************************** 
+Slideshow classes added
+- Source: https: //www.w3schools.com/howto/howto_js_slideshow_gallery.asp
+******************************************************************************/
+.slideshow-image{
+    display: none; /* Hide the slideshow images*/
+    width: 100%;
+}
+
+/* Next & previous buttons  */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: auto;
+    margin: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.prev{
+    left:0;
+    border-radius: 3px 0 0 3px;
+    display: flex; /* Need flex to align arrow in the center*/
+    align-items: center;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    display: flex; /* Need flex to align arrow in the center*/
+    align-items: center;
+}
+
+.slideshow-arrow{
+    
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container for image text */
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    /* padding: 2px 16px; */
+    padding-top: 1.5em;
+    color: white;
+    padding-bottom: 1.5em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .project-git-link{
 
 }
 
-.project a {
+.project .full-project-anchor {
     all: unset !important;
     text-decoration: none !important;
     color: rgb(72, 72, 66);
@@ -644,12 +708,12 @@ td {
         margin: 0 auto;
     }
 
-    .project a {
+    /* .project a {
         all: unset !important;
         text-decoration: none !important;
         color: rgb(72, 72, 66);
 
-    }
+    } */
 
 
     .project-title {
