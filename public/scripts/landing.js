@@ -315,37 +315,213 @@ courseList.forEach((course, idx) => {
     uofmCourseTable.appendChild(row); // Append the row to the table
 });
 
+/*************************************************************************
+ * Project Lister
+ * - The following logic will go through and create the list of projects
+ ************************************************************************/
+
+let projectSlideIndices = {"rootedInNature": 0,"fitness":0,"twenty48":0};
+
+// RootedInNature
+let rootedInNatureImages = ["/images/website_images/rootedinnature/homepage.png", "/images/website_images/rootedinnature/user_login_collection.png", "/images/website_images/rootedinnature/key.png","/images/website_images/rootedinnature/key_tooltip.png"];
+let rootedInNatureCaptions = ["Homepage", "Plant Collection page where users collected will be shown, and it can be seen that this site supports user authentication as the user \"bendan\" is logged in.", "Plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.","This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away."];
+let rootedInNatureDescription = "Website I helped setup for a University group project which showcases the Fitness Workout App we developed in Android Studio, a description of my contribution can be seen at 2:11 in the video."
+let rootedInNatureLink = "https://b-musick.github.io/fitness-tracker-app-website/";
+let rootedInNatureGithubLink = "github";
+
+let rootedInNatureProject = new Project("Square Rooted In Nature", "rootedInNature", rootedInNatureImages, rootedInNatureCaptions, rootedInNatureDescription, rootedInNatureLink, rootedInNatureGithubLink);
+
+// Fitness Project
+let fitnessImages = ["https://i.imgur.com/Zek3y9v.png","https://i.imgur.com/P2PGOgt.png"];
+let fitnessCaptions = ["Homepage","Application"];
+let fitnessDescription = "Website I helped setup for a University group project which showcases the Fitness Workout App we developed in Android Studio, a description of my contribution can be seen at 2:11 in the video."
+let fitnessLink = "https://b-musick.github.io/fitness-tracker-app-website/";
+let fitnessGithubLink = "github";
+
+let fitnessProject = new Project("Fitness Application", "fitness", fitnessImages,fitnessCaptions,fitnessDescription,fitnessLink,fitnessGithubLink);
+
+// 2048
+let twenty48Images = ["https://i.imgur.com/Zek3y9v.png", "https://i.imgur.com/P2PGOgt.png"];
+let twenty48Captions = ["Homepage", "Application"];
+let twenty48Description = "Website I helped setup for a University group project which showcases the Fitness Workout App we developed in Android Studio, a description of my contribution can be seen at 2:11 in the video."
+let twenty48Link = "https://b-musick.github.io/fitness-tracker-app-website/";
+let twenty48GithubLink = "github";
+
+let twenty48Project = new Project("2048", "twenty48", twenty48Images, twenty48Captions, twenty48Description, twenty48Link, twenty48GithubLink);
+
+
+let projects = [rootedInNatureProject,fitnessProject,twenty48Project]; // List of projects
+
+let row2 = document.getElementById("row-2");
+
+function addTitle(projectContainer, project) {
+    // Create the title
+    let projectTitle = document.createElement("div");
+    projectTitle.classList.add("project-title");
+    projectTitle.innerHTML = project.title;
+    projectContainer.appendChild(projectTitle);
+}
+
+function addSlideshowImages(imageContainer,project){
+    // Add the images for the slideshow by looping through image names and creating
+    // each individual image
+    project.images.forEach(img => {
+        let imageHolder = document.createElement("div");
+        // imageHolder.classList.add("slideshow-image");
+
+        // This class will make sure to choose the individual image for specific project
+        imageHolder.classList.add(project.keyword + "-slideshow-image");
+
+        // Create the actual image element
+        let image = document.createElement("img");
+        image.classList.add("project-image");
+        image.src = img;
+        imageHolder.appendChild(image); // Add image to container
+
+        // Append the image to imagecontainer
+        imageContainer.appendChild(imageHolder);
+    });
+};
+
+function addArrow(direction,htmlVal,project,imageContainer,listener){
+    // Add the slideshow arrows to the container
+    let prevArrow = document.createElement("a");
+    prevArrow.classList.add(direction);
+
+    // Set event listener to get the previous image
+    prevArrow.addEventListener('click', listener);
+
+    let prevArrowContainer = document.createElement("div");
+    prevArrowContainer.classList.add("slideshow-arrow");
+    prevArrowContainer.classList.add(project.keyword + "-slideshow-arrow");
+
+    prevArrowContainer.innerHTML = htmlVal;
+
+    prevArrow.appendChild(prevArrowContainer);
+    imageContainer.appendChild(prevArrow);
+}
+
+function addCaption(project,imageContainer){
+    // Add the caption
+    let captionContainer = document.createElement("div");
+    captionContainer.classList.add(project.keyword + "-caption-container");
+    captionContainer.classList.add("caption-container");
+
+    let captionDescription = document.createElement("p");
+    captionDescription.classList.add("caption");
+    captionDescription.classList.add(project.keyword + "-caption");
+    captionContainer.appendChild(captionDescription);
+
+    imageContainer.appendChild(captionContainer);
+}
+
+function addProjectDescription(project,projectContainer){
+    // Add the project description
+    let projectDescriptionContainer = document.createElement("div");
+    let projectDescription = document.createElement("div");
+    projectDescription.innerHTML = project.projectDescription;
+    projectDescription.classList.add("project-description");
+    projectDescription.classList.add(project.keyword + "-project-description");
+
+    projectDescriptionContainer.classList.add("project-text");
+    projectContainer.appendChild(projectDescription);
+}
+
+function addProjectLinks(project,projectContainer){
+    /**
+     * Project Links
+     */
+    let projectLinks = document.createElement("div");
+    projectLinks.classList.add("project-links");
+
+    // Add website to project
+    let website = document.createElement("a");
+    website.href = project.websiteLink;
+    let anchorButton = document.createElement("div");
+    anchorButton.classList.add("anchor-title");
+    anchorButton.innerHTML = "view";
+
+    website.appendChild(anchorButton);
+    projectLinks.appendChild(website);
+
+    // Github link
+    let githubLink = document.createElement("a");
+    githubLink.classList.add("project-git-link");
+    githubLink.href = project.githubLink;
+
+    // Icon for github
+    let icon = document.createElement("i");
+    icon.classList.add("devicon-github-original");
+    icon.classList.add("colored");
+    githubLink.appendChild(icon);
+
+    projectLinks.appendChild(githubLink);
+
+    projectContainer.appendChild(projectLinks);
+}
+// Loop through all projects and add associated data
+projects.forEach(project=>{
+    // Create the project container
+    let projectContainer = document.createElement("div");
+    projectContainer.classList.add("project");
+
+    addTitle(projectContainer,project);
+
+    // Create the slideshow
+    let imageContainer = document.createElement("div");
+    imageContainer.classList.add("project-image-container");
+
+    // Add the images to slideshow
+    addSlideshowImages(imageContainer,project);
+
+    // Add the slideshow arrow functions
+    addArrow("prev", "&#10094;", project, imageContainer, function() {
+        projectSlideIndices[project.keyword]--;
+        showSlides(project.keyword, projectSlideIndices[project.keyword]);
+    });
+
+    addArrow("next", "&#10095;", project, imageContainer, function () {
+        projectSlideIndices[project.keyword]++;
+        showSlides(project.keyword, projectSlideIndices[project.keyword]);
+    });
+
+    addCaption(project,imageContainer);
+
+    projectContainer.appendChild(imageContainer);
+
+    // Add the project description
+    addProjectDescription(project,projectContainer);
+
+    addProjectLinks(project,projectContainer);
+
+    row2.appendChild(projectContainer);
+});
+
+Object.keys(projectSlideIndices).forEach(keyword => {
+    showSlides(keyword, projectSlideIndices[keyword]);
+})
 
 /***************************************************************************
  * Project Image Slideshow Logic
  * Source - https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp 
  *      Section 3 - Javascript logic
  ***************************************************************************/
-let slideIndex = 0;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    // Get a list of all the slideshow images
-    let slides = document.getElementsByClassName("slideshow-image");
-
+function showSlides(keyword,n) {
+    // // Get a list of all the slideshow images
+    let slides = document.getElementsByClassName(keyword + "-slideshow-image");
 
     // let dots = document.getElementsByClassName("demo");
     let captionText = document.getElementById("caption");
-    if (n >= slides.length-1) { slideIndex = 0 }
-    if (n < 0) { slideIndex = slides.length-2 }
-    
-    for (let imgCount = 0; imgCount < slides.length; imgCount++) {
-        if (imgCount != slideIndex) {
-            slides[imgCount].style.display = "none";
+    if (n >= slides.length) { projectSlideIndices[keyword] = 0 }
+    if (n < 0) { projectSlideIndices[keyword] = slides.length-1 }
 
+    for (let imgCount = 0; imgCount < slides.length; imgCount++) {
+        if (imgCount != projectSlideIndices[keyword]) {
+            slides[imgCount].style.display = "none";
+            console.log(imgCount);
+            console.log(slides[imgCount]);
         }
     }
-
-    slides[slideIndex].style.display = "block";
+    slides[projectSlideIndices[keyword]].style.display = "block";
     // captionText.innerHTML = dots[slideIndex - 1].alt;
 }
