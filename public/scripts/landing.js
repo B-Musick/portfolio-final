@@ -320,8 +320,11 @@ courseList.forEach((course, idx) => {
  * - The following logic will go through and create the list of projects
  ************************************************************************/
 
-let projectSlideIndices = {"rootedInNature": 0,"fitness":0,"twenty48":0};
+// 1) Add keyword: so that the indices of the images can be kept track of when user presses next 
+// or previous button in the slideshow.
+let projectSlideIndices = {"rootedInNature": 0, "matrixCalculator":0, "graphCreator":0,"fitness":0,"twenty48":0};
 
+// 2) Create the associated project object
 // RootedInNature
 let rootedInNatureImages = ["/images/website_images/rootedinnature/homepage.png", "/images/website_images/rootedinnature/user_login_collection.png", "/images/website_images/rootedinnature/key.png","/images/website_images/rootedinnature/key_tooltip.png"];
 let rootedInNatureCaptions = ["Homepage", "Plant Collection page where users collected will be shown, and it can be seen that this site supports user authentication as the user \"bendan\" is logged in.", "Plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.","This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away."];
@@ -336,21 +339,40 @@ let fitnessImages = ["https://i.imgur.com/Zek3y9v.png"];
 let fitnessCaptions = ["Website Homepage"];
 let fitnessDescription = "Android application developed for University Course Comp 3350 (Software Engineering), along with a team of 4 other group members. The app is to track the workouts, meals and calories of a user in order to improve their fitness. There is also an associated brand website that I setup along with one other group memebr to showcase our app and the development process"
 let fitnessLink = "https://b-musick.github.io/fitness-tracker-app-website/";
-let fitnessGithubLink = "github";
+let fitnessGithubLink = "";
 
 let fitnessProject = new Project("Fitness Application", "fitness", fitnessImages,fitnessCaptions,fitnessDescription,fitnessLink,fitnessGithubLink);
 
+// MatrixCalculator
+let matrixCalculatorImages = ["/images/website_images/matrix_calculator/start_page.png", "/images/website_images/matrix_calculator/matrix_size.png", "/images/website_images/matrix_calculator/matrix_vals.png", "/images/website_images/matrix_calculator/submitted.png", "/images/website_images/matrix_calculator/row_operations.png", "/images/website_images/matrix_calculator/cofactor.png"];
+let matrixCalculatorCaptions = ["When page first loads, the user needs to put in the amount of matrices they will be working with.", "The next screen will then ask for the dimensions of the matrices.","Finally, the values of the matrices will be input.","Once submitted, you are redirected to a screen showing your matrices, a text box to submit certain calculations and on the bottom of the screen is descriptions of commands to input in the text box to perform various types of matrix calculations.","Typing AR will bring the user to a screen where they can perform various Gaussian and Gauss-Jordan row operations on the matrices, and the elementary matrices can be shown or not.","If the user types in AC, then a cofactor calculator comes up to perform minor, cofactor and determinate calculations."];
+let matrixCalculatorDescription = "Matrix Calculator I developed to manipulate matrices and perform various calculations on them. This is useful to make sure any calculations done by hand are accurate, helping learn the different methods of calculations on matrices. Developed using the React framework."
+let matrixCalculatorLink = "https://b-musick.github.io/matrix-calculator-rebuild-react/";
+let matrixCalculatorGithubLink = "https://github.com/B-Musick/matrix-calculator-rebuild-react";
+
+let matrixCalculatorProject = new Project("Matrix Calculator", "matrixCalculator", matrixCalculatorImages, matrixCalculatorCaptions, matrixCalculatorDescription, matrixCalculatorLink, matrixCalculatorGithubLink);
+
+// GraphCreator
+let graphCreatorImages = ["/images/website_images/graph_creator/scatterplot.png", "/images/website_images/graph_creator/homepage.png", "/images/website_images/graph_creator/histogram_selector.png", "/images/website_images/graph_creator/histogram.png", "/images/website_images/graph_creator/bar_graph.png", "/images/website_images/graph_creator/box_plot.png", "/images/website_images/graph_creator/normal.png"];
+let graphCreatorCaptions = ["Scatterplot created using a specifically formatted .csv file, it can be seen I implemented tooltips where when hovering over the points the coordinates of that point will be shown to the user.", "Starting at the homepage, the user is asked to choose from a dropdown list of graph types, then upload an associated file of the appropriate type. When the dropdown is selected, more information on the file format will be shown (see next image).", "Once the dropdown value is selected (in this case Histogram), some extra text inputs might be shown and more info on the way to format your file will be described.", "Histogram example output after uploading an appropriately formatted .csv file, shows a tooltip output from user hovering over one of the bars.", "Bar graph output, also showing tooltip output.", "Box plot, where tooltips will be shown for the quartiles, mean and medians.","Normal distribution graph."];
+let graphCreatorDescription = "I developed this graph maker using Object Oriented programming to define the different plot types. I used basic CSS, JavaScript and HTML, along with D3.js framework to output the SVG graphs from the .csv input files."
+let graphCreatorLink = "https://b-musick.github.io/graph-maker/";
+let graphCreatorGithubLink = "https://github.com/B-Musick/graph-maker";
+
+let graphCreatorProject = new Project("Graph Creator", "graphCreator", graphCreatorImages, graphCreatorCaptions, graphCreatorDescription, graphCreatorLink, graphCreatorGithubLink);
+
 // 2048
-let twenty48Images = ["https://i.imgur.com/Zek3y9v.png", "https://i.imgur.com/P2PGOgt.png"];
-let twenty48Captions = ["Homepage", "Application"];
-let twenty48Description = "Android application developed for University Course Comp 3350 (Software Engineering), along with a team of 4 other group members. The app is to track the workouts, meals and calories of a user in order to improve their fitness. There is also an associated brand website that I setup along with one other group memebr to showcase our app and the development process."
-let twenty48Link = "https://b-musick.github.io/fitness-tracker-app-website/";
-let twenty48GithubLink = "github";
+let twenty48Images = ["/images/website_images/twenty48/home.png"];
+let twenty48Captions = ["Homepage"];
+let twenty48Description = "My own recreation of a game invented by Gabriella Cirulli. Used D3 for the visual canvas and geometry.Used object oriented programming in JS for logic."
+let twenty48Link = "/projects/2048";
+let twenty48GithubLink = "https://github.com/B-Musick/2048-game";
 
 let twenty48Project = new Project("2048", "twenty48", twenty48Images, twenty48Captions, twenty48Description, twenty48Link, twenty48GithubLink);
 
+// 3) Add the project to the projects object so it can can be looped through
+let projects = [rootedInNatureProject,matrixCalculatorProject, graphCreatorProject,fitnessProject,twenty48Project]; // List of projects
 
-let projects = [rootedInNatureProject,fitnessProject,twenty48Project]; // List of projects
 
 let row2 = document.getElementById("row-2");
 

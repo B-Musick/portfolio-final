@@ -350,13 +350,11 @@ let playGame=(arr)=>{
         if (!board.gameOver()) {
             board.shift((String.fromCharCode(e.keyCode)).toLowerCase());
             board.printBoard();  
-            console.log((!document.getElementById('game-over-form')))
         }else{
             let score = d3.select('#score-value').text();
             // If the game is over, print to screen and remove keylistener for keydown
             document.removeEventListener('touchstart', move);
             document.removeEventListener('keydown', move);
-            console.log((!document.getElementById('game-over-form')))
             if (!document.getElementById('game-over-form')){
                 // So the game over doesnt print twice, make sure its not an element yet
                 d3.select('body').append('h1')
@@ -393,17 +391,18 @@ let playGame=(arr)=>{
 
     document.addEventListener('touchstart', (e) => {
         // e.preventDefault();
-        console.log(e.srcElement.classList[0])
         // Shift the board when the matching keycode pressed
         if (!board.gameOver()) {
             board.shift(directionalClick[e.srcElement.classList[0]]);
             board.printBoard();
         } else {
+            console.log(e);
+
             let score = d3.select('#score-value').text();
             // If the game is over, print to screen and remove keylistener for keydown
             document.removeEventListener('touchstart', move);
             document.removeEventListener('keydown', move);
-            console.log((!document.getElementById('game-over-form')))
+            // console.log((!document.getElementById('game-over-form')))
             if (!document.getElementById('game-over-form')){
                 // So the game over doesnt print twice, make sure its not an element yet
                 d3.select('body').append('h1')

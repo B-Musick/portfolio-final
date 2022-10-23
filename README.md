@@ -85,3 +85,8 @@ https://devcenter.heroku.com/articles/git
 - Upgrade stack
 https://devcenter.heroku.com/articles/upgrading-to-the-latest-stack
 
+# Adding Project to Project lister
+1) Add the keyword to the 'projectSlideIndices' object so that the indices of the images
+can be kept track of when user presses next or previous button in the slideshow.
+2) Create the associated project object
+3) Add the project to the projects object so it can can be looped through and accessed
