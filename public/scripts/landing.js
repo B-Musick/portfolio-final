@@ -325,16 +325,16 @@ let projectSlideIndices = {"rootedInNature": 0,"fitness":0,"twenty48":0};
 // RootedInNature
 let rootedInNatureImages = ["/images/website_images/rootedinnature/homepage.png", "/images/website_images/rootedinnature/user_login_collection.png", "/images/website_images/rootedinnature/key.png","/images/website_images/rootedinnature/key_tooltip.png"];
 let rootedInNatureCaptions = ["Homepage", "Plant Collection page where users collected will be shown, and it can be seen that this site supports user authentication as the user \"bendan\" is logged in.", "Plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.","This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away."];
-let rootedInNatureDescription = "Website I helped setup for a University group project which showcases the Fitness Workout App we developed in Android Studio, a description of my contribution can be seen at 2:11 in the video."
-let rootedInNatureLink = "https://b-musick.github.io/fitness-tracker-app-website/";
-let rootedInNatureGithubLink = "github";
+let rootedInNatureDescription = "Website I developed to host a variety of different functions, including being used as a plant collection database where users can store and view plants they collected and information about them. It also contains interactive plant keys where users navigate binomial keys interactively to identify certain plant species they find."
+let rootedInNatureLink = "";
+let rootedInNatureGithubLink = "https://github.com/B-Musick/sqr_rooted_in_nature";
 
 let rootedInNatureProject = new Project("Square Rooted In Nature", "rootedInNature", rootedInNatureImages, rootedInNatureCaptions, rootedInNatureDescription, rootedInNatureLink, rootedInNatureGithubLink);
 
 // Fitness Project
-let fitnessImages = ["https://i.imgur.com/Zek3y9v.png","https://i.imgur.com/P2PGOgt.png"];
-let fitnessCaptions = ["Homepage","Application"];
-let fitnessDescription = "Website I helped setup for a University group project which showcases the Fitness Workout App we developed in Android Studio, a description of my contribution can be seen at 2:11 in the video."
+let fitnessImages = ["https://i.imgur.com/Zek3y9v.png"];
+let fitnessCaptions = ["Website Homepage"];
+let fitnessDescription = "Android application developed for University Course Comp 3350 (Software Engineering), along with a team of 4 other group members. The app is to track the workouts, meals and calories of a user in order to improve their fitness. There is also an associated brand website that I setup along with one other group memebr to showcase our app and the development process"
 let fitnessLink = "https://b-musick.github.io/fitness-tracker-app-website/";
 let fitnessGithubLink = "github";
 
@@ -343,7 +343,7 @@ let fitnessProject = new Project("Fitness Application", "fitness", fitnessImages
 // 2048
 let twenty48Images = ["https://i.imgur.com/Zek3y9v.png", "https://i.imgur.com/P2PGOgt.png"];
 let twenty48Captions = ["Homepage", "Application"];
-let twenty48Description = "Website I helped setup for a University group project which showcases the Fitness Workout App we developed in Android Studio, a description of my contribution can be seen at 2:11 in the video."
+let twenty48Description = "Android application developed for University Course Comp 3350 (Software Engineering), along with a team of 4 other group members. The app is to track the workouts, meals and calories of a user in order to improve their fitness. There is also an associated brand website that I setup along with one other group memebr to showcase our app and the development process."
 let twenty48Link = "https://b-musick.github.io/fitness-tracker-app-website/";
 let twenty48GithubLink = "github";
 
@@ -477,12 +477,12 @@ projects.forEach(project=>{
     // Add the slideshow arrow functions
     addArrow("prev", "&#10094;", project, imageContainer, function() {
         projectSlideIndices[project.keyword]--;
-        showSlides(project.keyword, projectSlideIndices[project.keyword]);
+        showSlides(project.keyword, projectSlideIndices[project.keyword],project);
     });
 
     addArrow("next", "&#10095;", project, imageContainer, function () {
         projectSlideIndices[project.keyword]++;
-        showSlides(project.keyword, projectSlideIndices[project.keyword]);
+        showSlides(project.keyword, projectSlideIndices[project.keyword],project);
     });
 
     addCaption(project,imageContainer);
@@ -497,8 +497,8 @@ projects.forEach(project=>{
     row2.appendChild(projectContainer);
 });
 
-Object.keys(projectSlideIndices).forEach(keyword => {
-    showSlides(keyword, projectSlideIndices[keyword]);
+Object.keys(projectSlideIndices).forEach((keyword,idx) => {
+    showSlides(keyword, projectSlideIndices[keyword],projects[idx]);
 })
 
 /***************************************************************************
@@ -506,14 +506,14 @@ Object.keys(projectSlideIndices).forEach(keyword => {
  * Source - https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp 
  *      Section 3 - Javascript logic
  ***************************************************************************/
-function showSlides(keyword,n) {
+function showSlides(keyword,n,project) {
     // // Get a list of all the slideshow images
     let slides = document.getElementsByClassName(keyword + "-slideshow-image");
 
-    // let dots = document.getElementsByClassName("demo");
-    let captionText = document.getElementById("caption");
-    if (n >= slides.length) { projectSlideIndices[keyword] = 0 }
-    if (n < 0) { projectSlideIndices[keyword] = slides.length-1 }
+    // let  = document.getElementsByID("demo");
+    let captionText = document.querySelector("."+keyword+"-caption");
+    if (n >= slides.length) { projectSlideIndices[keyword] = 0;  }
+    if (n < 0) { projectSlideIndices[keyword] = slides.length-1; }
 
     for (let imgCount = 0; imgCount < slides.length; imgCount++) {
         if (imgCount != projectSlideIndices[keyword]) {
@@ -523,5 +523,5 @@ function showSlides(keyword,n) {
         }
     }
     slides[projectSlideIndices[keyword]].style.display = "block";
-    // captionText.innerHTML = dots[slideIndex - 1].alt;
+    captionText.innerHTML = project.imageCaptions[projectSlideIndices[keyword]];
 }

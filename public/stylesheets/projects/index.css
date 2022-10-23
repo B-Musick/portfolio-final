@@ -592,12 +592,17 @@ Slideshow classes added
     text-align: center;
     background-color: #222;
     /* padding: 2px 16px; */
-    padding-top: 1.5em;
+    padding-top: 0.5em;
     color: white;
-    padding-bottom: 1.5em;
+    padding-bottom: 0.5em;
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.caption{
+    font-size: small !important;
+    padding-left: 0.5em;
 }
 
 .project-git-link{
@@ -615,6 +620,10 @@ Slideshow classes added
     font-size: 23px;
 }
 
+.project-description{
+    padding-top: 1em;
+    text-align: justify;
+}
 .project-text {
     /* Text description of the project */
     color: rgb(72, 72, 66);
@@ -626,6 +635,10 @@ Slideshow classes added
     font-weight: 700;
     font-size: 1.5em;
     text-align: center;
+    padding: 1em;
+    border: black solid 2px;
+    background-color: gray;
+    margin-bottom: 0.1em;
 }
 
 .project-links{
