@@ -683,6 +683,11 @@ Slideshow classes added
     margin-top: 0.2em;
 }
 
+#project-index{
+    /* For the brendanmusick.ca/projects page, need margin */
+    padding: 4%;
+}
+
 @media(max-width:480px) {
 
     /****** Project section when viewed from phone **********/
@@ -768,6 +773,4 @@ Slideshow classes added
         text-align: center;
         margin-top: 25px;
     }
-
-
 }

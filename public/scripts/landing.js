@@ -322,7 +322,7 @@ courseList.forEach((course, idx) => {
 
 // 1) Add keyword: so that the indices of the images can be kept track of when user presses next 
 // or previous button in the slideshow.
-let projectSlideIndices = {"rootedInNature": 0, "matrixCalculator":0, "graphCreator":0,"fitness":0,"twenty48":0,"ticTacToe":0,"pomodoroClock":0};
+let projectSlideIndices = {"rootedInNature": 0, "matrixCalculator":0, "graphCreator":0,"fitness":0,"twenty48":0,"ticTacToe":0,"pomodoroClock":0, "sudokuSolver":0};
 
 // 2) Create the associated project object
 // RootedInNature
@@ -370,6 +370,15 @@ let twenty48GithubLink = "https://github.com/B-Musick/2048-game";
 
 let twenty48Project = new Project("2048", "twenty48", twenty48Images, twenty48Captions, twenty48Description, twenty48Link, twenty48GithubLink);
 
+// Sudoku Solver
+let sudokuSolverImages = ["https://i.imgur.com/Sbo7acN.png"];
+let sudokuSolverCaptions = ["Output after problem is solved."];
+let sudokuSolverDescription = "Sudoku solver programmed using basic HTML, CSS and Javascript. The user just has to give the dimensions of the sudoku table, and input the values which were given initially and the solution will be output."
+let sudokuSolverLink = "/projects/sudoku";
+let sudokuSolverGithubLink = "https://github.com/B-Musick/sudoku-recursive-solver";
+
+let sudokuSolverProject = new Project("Sudoku Solver", "sudokuSolver", sudokuSolverImages, sudokuSolverCaptions, sudokuSolverDescription, sudokuSolverLink, sudokuSolverGithubLink);
+
 // Tic Tac Toe React
 let ticTacToeImages = ["https://i.imgur.com/PqH8OZv.png"];
 let ticTacToeCaptions = ["After a player wins the game."];
@@ -390,10 +399,10 @@ let pomodoroClockGithubLink = "https://github.com/B-Musick/pomodoro-clock-react"
 let pomodoroClockProject = new Project("Pomodoro Clock (React Project)", "pomodoroClock", pomodoroClockImages, pomodoroClockCaptions, pomodoroClockDescription, pomodoroClockLink, pomodoroClockGithubLink);
 
 // 3) Add the project to the projects object so it can can be looped through
-let projects = [rootedInNatureProject,matrixCalculatorProject, graphCreatorProject,fitnessProject,twenty48Project,ticTacToeProject,pomodoroClockProject]; // List of projects
-
+let projects = [rootedInNatureProject,matrixCalculatorProject, graphCreatorProject,fitnessProject,twenty48Project,sudokuSolverProject,ticTacToeProject,pomodoroClockProject]; // List of projects
 
 let row2 = document.getElementById("row-2");
+let projectPageIndex = document.getElementById("project-page-index");
 
 function addTitle(projectContainer, project) {
     // Create the title
