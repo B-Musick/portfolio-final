@@ -322,12 +322,12 @@ courseList.forEach((course, idx) => {
 
 // 1) Add keyword: so that the indices of the images can be kept track of when user presses next 
 // or previous button in the slideshow.
-let projectSlideIndices = {"rootedInNature": 0, "matrixCalculator":0, "graphCreator":0,"fitness":0,"twenty48":0};
+let projectSlideIndices = {"rootedInNature": 0, "matrixCalculator":0, "graphCreator":0,"fitness":0,"twenty48":0,"ticTacToe":0,"pomodoroClock":0};
 
 // 2) Create the associated project object
 // RootedInNature
-let rootedInNatureImages = ["/images/website_images/rootedinnature/homepage.png", "/images/website_images/rootedinnature/user_login_collection.png", "/images/website_images/rootedinnature/key.png","/images/website_images/rootedinnature/key_tooltip.png"];
-let rootedInNatureCaptions = ["Homepage", "Plant Collection page where users collected will be shown, and it can be seen that this site supports user authentication as the user \"bendan\" is logged in.", "Plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.","This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away."];
+let rootedInNatureImages = ["/images/website_images/rootedinnature/homepage.png", "/images/website_images/rootedinnature/dropdown.png", "/images/website_images/rootedinnature/user_login_collection.png", "/images/website_images/rootedinnature/owner_plant.png" ,"/images/website_images/rootedinnature/key.png","/images/website_images/rootedinnature/key_tooltip.png"];
+let rootedInNatureCaptions = ["Homepage", "Dropdowns I implemented with Javascript, allowing a user to create and view plants for their collection, as well as different plant keys that are accessible.","Plant Collection page where users collected will be shown, and it can be seen that this site supports user authentication as the user \"bendan\" is logged in.", "You can see when a user is logged in, they can edit or delete a plant which they personally submitted. Logged in users can also add comments to uploaded plants." ,"Plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.","This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away."];
 let rootedInNatureDescription = "Website I developed to host a variety of different functions, including being used as a plant collection database where users can store and view plants they collected and information about them. It also contains interactive plant keys where users navigate binomial keys interactively to identify certain plant species they find."
 let rootedInNatureLink = "";
 let rootedInNatureGithubLink = "https://github.com/B-Musick/sqr_rooted_in_nature";
@@ -337,7 +337,7 @@ let rootedInNatureProject = new Project("Square Rooted In Nature", "rootedInNatu
 // Fitness Project
 let fitnessImages = ["https://i.imgur.com/Zek3y9v.png"];
 let fitnessCaptions = ["Website Homepage"];
-let fitnessDescription = "Android application developed for University Course Comp 3350 (Software Engineering), along with a team of 4 other group members. The app is to track the workouts, meals and calories of a user in order to improve their fitness. There is also an associated brand website that I setup along with one other group memebr to showcase our app and the development process"
+let fitnessDescription = "Android application developed for University Course Software Engineering, along with a team of 4 other group members. The app is to track the workouts, meals and calories of a user in order to improve their fitness. There is also an associated brand website that I setup along with one other group memebr to showcase our app and the development process"
 let fitnessLink = "https://b-musick.github.io/fitness-tracker-app-website/";
 let fitnessGithubLink = "";
 
@@ -370,8 +370,27 @@ let twenty48GithubLink = "https://github.com/B-Musick/2048-game";
 
 let twenty48Project = new Project("2048", "twenty48", twenty48Images, twenty48Captions, twenty48Description, twenty48Link, twenty48GithubLink);
 
+// Tic Tac Toe React
+let ticTacToeImages = ["https://i.imgur.com/PqH8OZv.png"];
+let ticTacToeCaptions = ["After a player wins the game."];
+let ticTacToeDescription = "Classic Tic Tac Toe built using React. Can play against a basic low level AI or play with a friend / enemy. This was one of my projects developed for the freeCodeCamp React curriculum."
+let ticTacToeLink = "https://safe-journey-31520.herokuapp.com/";
+let ticTacToeGithubLink = "https://github.com/B-Musick/tic_tac_toe_react";
+
+let ticTacToeProject = new Project("Tic Tac Toe (React Project)", "ticTacToe", ticTacToeImages, ticTacToeCaptions, ticTacToeDescription, ticTacToeLink, ticTacToeGithubLink);
+
+
+// Pomodoro Clock
+let pomodoroClockImages = ["https://i.imgur.com/RCqZpbb.png"];
+let pomodoroClockCaptions = ["Homepage"];
+let pomodoroClockDescription = "Pomodoro clock to keep goals on time. Built using React. This was one of my projects developed for the freeCodeCamp React curriculum."
+let pomodoroClockLink = "https://fast-spire-51085.herokuapp.com/";
+let pomodoroClockGithubLink = "https://github.com/B-Musick/pomodoro-clock-react";
+
+let pomodoroClockProject = new Project("Pomodoro Clock (React Project)", "pomodoroClock", pomodoroClockImages, pomodoroClockCaptions, pomodoroClockDescription, pomodoroClockLink, pomodoroClockGithubLink);
+
 // 3) Add the project to the projects object so it can can be looped through
-let projects = [rootedInNatureProject,matrixCalculatorProject, graphCreatorProject,fitnessProject,twenty48Project]; // List of projects
+let projects = [rootedInNatureProject,matrixCalculatorProject, graphCreatorProject,fitnessProject,twenty48Project,ticTacToeProject,pomodoroClockProject]; // List of projects
 
 
 let row2 = document.getElementById("row-2");
