@@ -198,6 +198,8 @@ projects.forEach(project => {
     // Create the project container
     let projectContainer = document.createElement("div");
     projectContainer.classList.add("project");
+    // Set the id to the keyword to easily access
+    projectContainer.setAttribute('id',project.keyword);
 
     addTitle(projectContainer, project);
 
