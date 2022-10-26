@@ -1,5 +1,4 @@
 body {
-
     padding: 0;
     margin: 0;
     
@@ -8,19 +7,17 @@ body {
 .navbar {
     background-color: rgb(213, 212, 212);
     display: flex; 
-    width: 100vw; 
- 
+    width: 100%; 
+    position: relative;
 }
 
-.navbar a:hover{
+.nav-main:hover{
     background-color:rgb(72, 72, 66);
     color: rgb(213, 212, 212);
-    
 }
 
 .navbar-about{
     margin-right: auto;
-    
 }
 .navbar-projects,
 .navbar-resume,
@@ -29,7 +26,7 @@ body {
     margin-right: 15px;
 }
 
-.navbar a {
+.nav-main {
     padding: 20px;
     text-decoration: none;
     color: white;

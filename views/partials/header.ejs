@@ -10,6 +10,8 @@
     <title>Brendan Musick's Portfolio</title>
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/sandwich-menu.css">
+
     <link rel="stylesheet" href="/stylesheets/landing.css">
 
     <!-- BLOG STYLESHEETS -->
@@ -40,11 +42,13 @@
 <body>
     
     <nav class="navbar">
-        <a class="navbar-about" href="/">BrendanMusick</a>
+        <a class="navbar-about nav-main" href="/">BrendanMusick</a>
 
-        <a class="navbar-projects" href="/">Home</a>
-        <a class="navbar-blogs" href="/blogs">Blogs</a>
-        <a class="navbar-contact">Contact</a>
+        <a class="navbar-home nav-main" href="/">Home</a>
+        <a class="navbar-blogs nav-main" href="/blogs">Blogs</a>
+        <a class="navbar-contact nav-main">Contact</a>
+        <% include ./sandwich-menu %>
+        
 
     </nav>
 
