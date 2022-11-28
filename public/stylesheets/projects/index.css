@@ -515,12 +515,18 @@ td {
     height: fit-content;
     display: flex;
     flex-direction: column; /* Want the info to be in vertical stack*/
+    align-items: center;
     /* grid-template-columns: 150px 300px 100px; */
 }
 
+
+.slideshow-image{
+    display: flex !important;
+    justify-content: center;
+}
 .project-image {
-    height: 30%;
-    width: 100%;
+    max-height: 30%;
+    max-width: 100%;
     /* border-radius: 50px; */
 }
 
@@ -530,7 +536,7 @@ td {
     justify-content: center; */
     /* Position to place the gallery arrows*/
     position: relative;
-    width: 100%;
+    width: fit-content;
     /* width:max-content; */
 }
 
@@ -548,8 +554,8 @@ Slideshow classes added
 .next {
     cursor: pointer;
     position: absolute;
-    top: 0%;
-    height: 100%;
+    top: 2.6%;
+    height: 97.4%;
     width: auto;
     margin: auto;
     padding-left: 16px;
@@ -639,6 +645,7 @@ Slideshow classes added
     border: black solid 2px;
     background-color: gray;
     margin-bottom: 0.1em;
+    width: 100%;
 }
 
 .project-links{
