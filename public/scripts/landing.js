@@ -334,14 +334,18 @@ let rootedInNatureGithubLink = "https://github.com/B-Musick/sqr_rooted_in_nature
 
 let rootedInNatureProject = new Project("Square Rooted In Nature", "rootedInNature", rootedInNatureImages, rootedInNatureCaptions, rootedInNatureDescription, rootedInNatureLink, rootedInNatureGithubLink);
 
-// Fitness Project
-let fitnessImages = ["https://i.imgur.com/Zek3y9v.png"];
-let fitnessCaptions = ["Website Homepage"];
+/**
+ * Fitness Project 
+ * */
+let fitnessImages = ["/images/website_images/fitness_app/0_start_screen.png", "/images/website_images/fitness_app/1_start_screen_user_info.png", "/images/website_images/fitness_app/2_nav_screen.png", "/images/website_images/fitness_app/3_main_workout_page.png", "/images/website_images/fitness_app/4_main_workout_creation.png", "/images/website_images/fitness_app/5_new_cardio_workout.png", "/images/website_images/fitness_app/6_forgot_distance.png", "/images/website_images/fitness_app/7_after_submission.png", "/images/website_images/fitness_app/8_strength_workout.png", "/images/website_images/fitness_app/9_after_submissions.png", "/images/website_images/fitness_app/11_workout_history_after_add.png", "/images/website_images/fitness_app/14_website.png", "/images/website_images/fitness_app/12_project_layout.png", "/images/website_images/fitness_app/13_test_files_layout.png"];
+
+let fitnessCaptions = ["Main screen the user first encounters to login to their account or register for one. The fitness app keeps track of each users individual workouts, calorie intake, etc.", "We created a user janesmith123 to complete all our testing with.", "The main navigation screen where the user can either go to create a new workout (the portion of the application which I programmed), or can go to their weight details.", "When click on the green workout button, you come to this page where the user can either create a new workout or view their history.", "Initial page shown when user wants to create new workout. They can add either cardio excersize or strength excersize to the current workout.", "Adding a new cardio excersize to the workout.", "Can see I added error handling measures in case user doesnt input some piece of data, it is handled in the logic layer and relays this information to the UI.", "After user submits the excersize it will be listed within the current workout page.", "Adding a strength workout involves the same process as a cardio workout and has error handling as well to let the user know when imporperly filled in an input.", "You can see we now have a workout which contains both a cardio and a strength workout, from which an excersize can either be edited or deleted if you wish. Once complete you press the 'finish' button.", "The workout is then stored with the user and can be viewed in their workout history. I was only able to complete the listing out of the workouts before we had to submit our final version of the applicaiton at end of the term.", "I was responsible with creating the layout of our applications website to show off the features of our application, you can see we made a video showcasing the app, have a section for velocity metrics for how quickly we completed portions of the app, our vision statement.", "This is a general look at the structure of our applications files, where we used an 'n-tier Architecture' having a business layer, database layer, presentation (UI) layer and have domain-specific objects since this project was object oriented (OOP) based and we developed these classes outlining our main objects stored in the database. The objects associated with my portion of the app were Exercise, Workout, ExerciseWorkout, Cardio and Strength", "This project was developed using Test Driven Development, and tests were created as we completed features. We divided the tests into a folder for the business (logic) layer tests, and acceptance tests which run through multiple sections of the application and all layers."];
+
 let fitnessDescription = "Android application developed for University Course Software Engineering, along with a team of 4 other group members. The app is to track the workouts, meals and calories of a user in order to improve their fitness. There is also an associated brand website that I setup along with one other group memebr to showcase our app and the development process"
 let fitnessLink = "https://b-musick.github.io/fitness-tracker-app-website/";
 let fitnessGithubLink = "";
 
-let fitnessProject = new Project("Fitness Application", "fitness", fitnessImages,fitnessCaptions,fitnessDescription,fitnessLink,fitnessGithubLink);
+let fitnessProject = new Project("Fitness Application", "fitness", fitnessImages, fitnessCaptions, fitnessDescription, fitnessLink, fitnessGithubLink);
 
 // MatrixCalculator
 let matrixCalculatorImages = ["/images/website_images/matrix_calculator/start_page.png", "/images/website_images/matrix_calculator/matrix_size.png", "/images/website_images/matrix_calculator/matrix_vals.png", "/images/website_images/matrix_calculator/submitted.png", "/images/website_images/matrix_calculator/row_operations.png", "/images/website_images/matrix_calculator/cofactor.png"];
@@ -399,7 +403,7 @@ let pomodoroClockGithubLink = "https://github.com/B-Musick/pomodoro-clock-react"
 let pomodoroClockProject = new Project("Pomodoro Clock (React Project)", "pomodoroClock", pomodoroClockImages, pomodoroClockCaptions, pomodoroClockDescription, pomodoroClockLink, pomodoroClockGithubLink);
 
 // 3) Add the project to the projects object so it can can be looped through
-let projects = [rootedInNatureProject,matrixCalculatorProject, graphCreatorProject,fitnessProject,twenty48Project,sudokuSolverProject,ticTacToeProject,pomodoroClockProject]; // List of projects
+let projects = [rootedInNatureProject, fitnessProject, matrixCalculatorProject, graphCreatorProject,twenty48Project,sudokuSolverProject,ticTacToeProject,pomodoroClockProject]; // List of projects
 
 let row2 = document.getElementById("row-2");
 let projectPageIndex = document.getElementById("project-page-index");
