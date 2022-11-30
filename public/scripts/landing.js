@@ -327,7 +327,8 @@ let projectSlideIndices = {"rootedInNature": 0, "matrixCalculator":0, "graphCrea
 // 2) Create the associated project object
 // RootedInNature
 let rootedInNatureImages = ["/images/website_images/rootedinnature/homepage.png", "/images/website_images/rootedinnature/dropdown.png", "/images/website_images/rootedinnature/user_login_collection.png", "/images/website_images/rootedinnature/before_filter.png", "/images/website_images/rootedinnature/after_filter.png", "/images/website_images/rootedinnature/owner_plant.png", "/images/website_images/rootedinnature/keys_home.png",
-    "/images/website_images/rootedinnature/key.png", "/images/website_images/rootedinnature/key_tooltip.png"];
+    "/images/website_images/rootedinnature/key.png", "/images/website_images/rootedinnature/key_tooltip.png",
+    "/images/website_images/rootedinnature/upload_json.png", "/images/website_images/rootedinnature/json_test.png", "/images/website_images/rootedinnature/keys_home_after_add.png", "/images/website_images/rootedinnature/test_key.png", "/images/website_images/rootedinnature/test_key_end.png"];
 
 let rootedInNatureCaptions = [
     "Homepage, where there is the main header which contains all the page links and routes, as well as capabilities for users to register and login.",
@@ -338,7 +339,11 @@ let rootedInNatureCaptions = [
     "This shows the page when user clicks on a plant. You can see when a user is logged in, they can edit or delete a plant which they personally submitted. Logged in users can also add comments to uploaded plants.",
     "Page listing the different plant keys available, as well as the user keys which they have uploaded (none have been uploaded in this image).",
     "When we click on a plant key, we get shown choices to choose from. The plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.",
-    "This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away."];
+    "This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away.",
+    "Here is the form for if the user want to upload their own JSON file to create their own interactive plant key.",
+    "This is an example of a test key I created to show how it should be formatted so all the data is extracted properly.", "After submitted, it will redirect the user to the plant key page and show their key under 'User Keys', and the user can then click it.", "This shows the test key that was uploaded in the previous images, and is now interactive.", "This image just shows reaching the end of the key the user uploaded."
+];
+    
 let rootedInNatureDescription = "Website I developed to host a variety of different functions, including being used as a plant collection database where users can store and view plants they collected and information about them. It also contains interactive plant keys where users navigate binomial keys interactively to identify certain plant species they find."
 let rootedInNatureLink = "";
 let rootedInNatureGithubLink = "https://github.com/B-Musick/sqr_rooted_in_nature";
