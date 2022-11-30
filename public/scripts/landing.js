@@ -326,8 +326,18 @@ let projectSlideIndices = {"rootedInNature": 0, "matrixCalculator":0, "graphCrea
 
 // 2) Create the associated project object
 // RootedInNature
-let rootedInNatureImages = ["/images/website_images/rootedinnature/homepage.png", "/images/website_images/rootedinnature/dropdown.png", "/images/website_images/rootedinnature/user_login_collection.png", "/images/website_images/rootedinnature/owner_plant.png" ,"/images/website_images/rootedinnature/key.png","/images/website_images/rootedinnature/key_tooltip.png"];
-let rootedInNatureCaptions = ["Homepage", "Dropdowns I implemented with Javascript, allowing a user to create and view plants for their collection, as well as different plant keys that are accessible.","Plant Collection page where users collected will be shown, and it can be seen that this site supports user authentication as the user \"bendan\" is logged in.", "You can see when a user is logged in, they can edit or delete a plant which they personally submitted. Logged in users can also add comments to uploaded plants." ,"Plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.","This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away."];
+let rootedInNatureImages = ["/images/website_images/rootedinnature/homepage.png", "/images/website_images/rootedinnature/dropdown.png", "/images/website_images/rootedinnature/user_login_collection.png", "/images/website_images/rootedinnature/before_filter.png", "/images/website_images/rootedinnature/after_filter.png", "/images/website_images/rootedinnature/owner_plant.png", "/images/website_images/rootedinnature/key.png", "/images/website_images/rootedinnature/key_tooltip.png"];
+
+let rootedInNatureCaptions = [
+    "Homepage, where there is the main header which contains all the page links and routes, as well as capabilities for users to register and login.",
+    "Dropdowns I implemented with Javascript, allowing a user to create and view plants for their collection, as well as different plant keys that are accessible. It can be seen that I have logged in and it shows my username 'Brendan' now in green where the login button was, and there is now a logout button where the 'register' button used to be.",
+    "Plant Collection page where users collected plants are be shown. When the user hovers over the image it shows some of the plants details, and the user can click the image to be redirected to a page showing more details on the plant. There are also buttons to add a new plant and to filter the plant selection.",
+    "This image just shows the dropdown that appears when the user selects the 'filter' button, where they can filter the plants shown by family and genus.",
+    "You can see after the filter details are submitted, it will filter out all the plants not matching and only show those matching, in this case 'Woodland Strawberry' since it is in the family Rosaceae and has the genus Fragaria (as shown in previous image).",
+    "This shows the page when user clicks on a plant. You can see when a user is logged in, they can edit or delete a plant which they personally submitted. Logged in users can also add comments to uploaded plants.",
+    "Plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.",
+    "This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away."];
+
 let rootedInNatureDescription = "Website I developed to host a variety of different functions, including being used as a plant collection database where users can store and view plants they collected and information about them. It also contains interactive plant keys where users navigate binomial keys interactively to identify certain plant species they find."
 let rootedInNatureLink = "";
 let rootedInNatureGithubLink = "https://github.com/B-Musick/sqr_rooted_in_nature";
